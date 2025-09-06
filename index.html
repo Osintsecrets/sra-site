@@ -26,141 +26,39 @@
   <link href="/assets/css/styles.css" rel="stylesheet" />
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
-  <a href="#main" class="absolute left-2 top-2 z-[100] rounded-md bg-white/10 px-2 py-1 text-xs backdrop-blur hover:bg-white/20 focus:outline-none focus:ring">Skip to content</a>
-
-  <div class="w-full bg-emerald-500/10 border-b border-emerald-400/20 text-emerald-200 text-center text-sm py-2" data-i18n="announcement">Consent-only, public-view audits. Educational. You stay in control.</div>
-  <div class="w-full border-b border-white/10 bg-white/5">
-    <div class="mx-auto max-w-6xl px-4 py-2 text-xs text-white/70 flex items-center gap-2">
-      <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
-      <span class="font-semibold" data-i18n="ribbon.title">Manual Audit Promise:</span>
-      <span data-i18n="ribbon.copy">No bots, no scraping, no API. Every audit is performed by a human, reviewing only what’s publicly visible.</span>
-    </div>
-  </div>
   <div id="sra-header"></div>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-600/20 via-neutral-900 to-neutral-950"></div>
-    <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
-      <div class="max-w-2xl">
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight" data-i18n="hero.title">See your Facebook the way a stranger does.</h1>
-        <p class="mt-4 text-lg text-white/70" data-i18n="hero.subtitle">We run an independent, consent-only exposure audit of your public Facebook. You’ll see what’s visible, how it could be misused, and what options you have. You stay in control.</p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a id="ctaStartHero" href="#" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 font-semibold text-neutral-900 hover:bg-white/90" data-i18n="cta.start">Start my audit</a>
-          <a id="ctaMessageHero" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10" data-i18n="cta.message">Message me first</a>
-        </div>
-        <div class="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
-          <div class="flex items-start gap-3">
-            <div class="mt-1 h-3 w-3 rounded-full bg-emerald-400"></div>
-            <div>
-              <p class="text-sm text-white/80" data-i18n="manual.card.lead"><span class="font-semibold">Manual, not AI:</span> I personally review posts, photos, comments, and visible profile fields. No logins, no friend requests, no bypassing privacy.</p>
-              <p class="mt-2 text-xs text-white/50" data-i18n="manual.card.note">Effort depends on how much you’ve posted—3 posts in 12 months vs. 300 is a different scope. The estimator below helps set expectations.</p>
-            </div>
-          </div>
-        </div>
-        <p class="mt-3 text-xs text-white/50" data-i18n="hero.badges">No logins. No friend requests. Public-view only. Evidence-based.</p>
-      </div>
-    </div>
-  </section>
-
   <main id="main">
-    <!-- Tabs: Summary / Details -->
-    <section class="mx-auto max-w-6xl px-4 pt-6">
-      <div class="inline-flex rounded-xl border border-white/10 bg-white/5 p-1" role="tablist" aria-label="View mode">
-        <button class="sra-tab sra-tab-active rounded-lg px-4 py-2 text-sm font-semibold" data-tab="summary" role="tab" aria-selected="true" data-i18n="tabs.summary">Summary</button>
-        <button class="sra-tab rounded-lg px-4 py-2 text-sm font-semibold text-white/70 hover:text-white" data-tab="details" role="tab" aria-selected="false" data-i18n="tabs.details">Details</button>
-      </div>
-    </section>
-
-    <!-- SUMMARY PANEL -->
-    <section id="tab-summary" data-tab-panel="summary" class="mx-auto max-w-6xl px-4 py-10">
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="font-bold" data-i18n="summary.clarity.h">Clarity</h3>
-          <p class="mt-2 text-white/70" data-i18n="summary.clarity.p">See your Facebook exactly as a stranger would. No surprises.</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="font-bold" data-i18n="summary.control.h">Control</h3>
-          <p class="mt-2 text-white/70" data-i18n="summary.control.p">You decide what to keep public or change. I don’t prescribe.</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="font-bold" data-i18n="summary.proof.h">Proof</h3>
-          <p class="mt-2 text-white/70" data-i18n="summary.proof.p">Every finding is documented with screenshots so you can verify.</p>
+    <section class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">See your Facebook the way a stranger does.</h1>
+        <p class="mt-4 text-lg text-white/70">Independent, consent-only exposure audit of your public Facebook. Human performed. You choose what to change.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a id="ctaStartHero" href="#" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 font-semibold text-neutral-900 hover:bg-white/90">Start my audit</a>
+          <a id="ctaMessageHero" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10">Message me first</a>
         </div>
       </div>
 
-      <div class="mt-8 rounded-2xl border border-emerald-400/30 bg-emerald-500/5 p-6 md:p-8">
-        <h2 class="text-2xl font-extrabold" data-i18n="est.title">Scope Estimator</h2>
-        <p class="mt-2 text-white/70 text-sm" data-i18n="est.desc">A quick way to set expectations. This isn’t automated scanning—it’s a manual review. Estimates help match effort to your goals.</p>
-        <form id="estimatorForm" class="mt-6 grid gap-6 md:grid-cols-2" onsubmit="return false;">
-          <div>
-            <label for="timeframe" class="block text-sm font-semibold" data-i18n="est.timeframe">Timeframe</label>
-            <select id="timeframe" class="sra-input mt-2">
-              <option value="12" data-i18n="est.tf.12">Last 12 months</option>
-              <option value="48" data-i18n="est.tf.48">Last 3–4 years</option>
-              <option value="180" data-i18n="est.tf.180">Full history (approx.)</option>
-            </select>
-            <p class="mt-2 text-xs text-white/50">Choose how far back you want me to look.</p>
-          </div>
-          <div>
-            <label for="postsPerWeek" class="block text-sm font-semibold" data-i18n="est.ppw">Average posts per week</label>
-            <input id="postsPerWeek" type="range" min="0" max="14" step="1" value="2" class="mt-2 w-full" />
-            <div class="mt-1 text-xs text-white/50"><span id="ppwOut">2</span> posts/week (estimate)</div>
-          </div>
-          <div>
-            <label for="taggedFreq" class="block text-sm font-semibold" data-i18n="est.tagged">Tagged posts frequency</label>
-            <input id="taggedFreq" type="range" min="0" max="10" step="1" value="1" class="mt-2 w-full" />
-            <div class="mt-1 text-xs text-white/50"><span id="taggedOut">1</span> per week (estimate)</div>
-          </div>
-          <div>
-            <label for="commentsPerPost" class="block text-sm font-semibold" data-i18n="est.cpp">Typical comments per post</label>
-            <input id="commentsPerPost" type="range" min="0" max="50" step="1" value="5" class="mt-2 w-full" />
-            <div class="mt-1 text-xs text-white/50"><span id="cppOut">5</span> comments/post (estimate)</div>
-          </div>
-          <div>
-            <label for="groupsEvents" class="block text-sm font-semibold" data-i18n="est.ge">Active groups/events</label>
-            <input id="groupsEvents" type="range" min="0" max="50" step="1" value="5" class="mt-2 w-full" />
-            <div class="mt-1 text-xs text-white/50"><span id="geOut">5</span> active (estimate)</div>
-          </div>
-          <div>
-            <label for="albums" class="block text-sm font-semibold" data-i18n="est.alb">Photo albums to scan</label>
-            <input id="albums" type="range" min="0" max="50" step="1" value="3" class="mt-2 w-full" />
-            <div class="mt-1 text-xs text-white/50"><span id="albOut">3</span> albums (estimate)</div>
-          </div>
-        </form>
-        <div class="mt-6 grid gap-6 md:grid-cols-3">
-          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-            <div class="text-sm text-white/50" data-i18n="est.items">Estimated items to review</div>
-            <div id="estItems" class="mt-1 text-2xl font-extrabold">—</div>
-          </div>
-          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-            <div class="text-sm text-white/50" data-i18n="est.effort">Effort band (manual)</div>
-            <div id="estEffort" class="mt-1 text-2xl font-extrabold">—</div>
-            <div class="mt-1 text-xs text-white/50">Varies with complexity; final scope confirmed after a brief chat.</div>
-          </div>
-          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
-            <div class="text-sm text-white/50" data-i18n="est.package">Suggested package</div>
-            <div id="estPackage" class="mt-1 text-2xl font-extrabold">—</div>
-            <div class="mt-1 text-xs text-white/50">You can always upgrade or narrow focus.</div>
-          </div>
-        </div>
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a id="ctaMessageEstimator" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10" data-i18n="cta.message">Message me first</a>
-          <a id="ctaStartEstimator" href="#" class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400" data-i18n="cta.start">Start my audit</a>
-        </div>
-        <p class="mt-3 text-xs text-white/50" data-i18n="est.note">These are non-binding estimates to aid planning. All audits are human-performed using only public information.</p>
-      </div>
-    </section>
-
-    <!-- DETAILS PANEL -->
-    <section id="tab-details" data-tab-panel="details" class="hidden mx-auto max-w-6xl px-4 py-10">
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <a href="/how.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="how"><h3 class="font-bold" data-i18n="nav.how">How it works</h3></a>
-        <a href="/what-you-get.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="deliverables"><h3 class="font-bold" data-i18n="nav.deliverables">What you get</h3></a>
-        <a href="/packages.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="packages"><h3 class="font-bold" data-i18n="nav.packages">Packages</h3></a>
-        <a href="/ethics.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="ethics"><h3 class="font-bold" data-i18n="nav.ethics">Ethics</h3></a>
-        <a href="/faq.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="faq"><h3 class="font-bold" data-i18n="nav.faq">FAQ</h3></a>
-        <a href="/about.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="about"><h3 class="font-bold" data-i18n="nav.about">About</h3></a>
+      <!-- Quick nav tiles -->
+      <div class="mt-14 grid gap-6 md:grid-cols-3">
+        <a href="/how.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <h3 class="text-xl font-bold">How it works</h3><p class="mt-2 text-white/70">The DARK process, step-by-step.</p>
+        </a>
+        <a href="/what-you-get.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <h3 class="text-xl font-bold">What you get</h3><p class="mt-2 text-white/70">Report, evidence, and guides.</p>
+        </a>
+        <a href="/packages.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <h3 class="text-xl font-bold">Packages</h3><p class="mt-2 text-white/70">Choose depth; add pivots.</p>
+        </a>
+        <a href="/ethics.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <h3 class="text-xl font-bold">Ethics</h3><p class="mt-2 text-white/70">Consent-only, public-view.</p>
+        </a>
+        <a href="/faq.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <h3 class="text-xl font-bold">FAQ</h3><p class="mt-2 text-white/70">Straight answers.</p>
+        </a>
+        <a href="/about.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+          <h3 class="text-xl font-bold">About</h3><p class="mt-2 text-white/70">Who I am and why I care.</p>
+        </a>
       </div>
     </section>
   </main>
@@ -172,10 +70,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="/assets/js/i18n.js"></script>
   <script type="module">
-    import { sraInit, initTabs, initEstimator } from '/assets/js/main.js';
+    import { sraInit } from '/assets/js/main.js';
     await sraInit('home');
-    initTabs();
-    initEstimator();
   </script>
 </body>
 </html>

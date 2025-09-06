@@ -22,3 +22,8 @@ html[dir="rtl"] .text-left { text-align: right; }
 html[dir="rtl"] .text-right { text-align: left; }
 /* Flip common gap/padding nuances only if needed; Tailwind handles most layout well in RTL. */
 /* Optional: tweak FAQ summary arrow if you added icons, not needed now. */
+
+/* Mega menu transitions */
+#megaPanel { transition: opacity .15s ease; }
+#megaPanel[data-open="true"] { opacity: 1; }
+#megaPanel.hidden { opacity: 0; }

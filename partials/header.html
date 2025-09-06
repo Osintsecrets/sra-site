@@ -1,36 +1,94 @@
-<!-- Shared Header/Nav -->
 <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
     <a href="/" class="flex items-center gap-3">
       <img src="/assets/images/no background white.png" alt="Social Risk Audit logo" class="h-8 w-auto" />
       <span class="text-lg font-extrabold tracking-tight">Social Risk Audit</span>
     </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a data-i18n="nav.home" href="/" class="hover:text-white/70" data-nav="home">Home</a>
-      <a data-i18n="nav.how" href="/how.html" class="hover:text-white/70" data-nav="how">How it works</a>
-      <a data-i18n="nav.deliverables" href="/what-you-get.html" class="hover:text-white/70" data-nav="deliverables">What you get</a>
-      <a data-i18n="nav.packages" href="/packages.html" class="hover:text-white/70" data-nav="packages">Packages</a>
-      <a data-i18n="nav.ethics" href="/ethics.html" class="hover:text-white/70" data-nav="ethics">Ethics</a>
-      <a data-i18n="nav.faq" href="/faq.html" class="hover:text-white/70" data-nav="faq">FAQ</a>
-      <a data-i18n="nav.about" href="/about.html" class="hover:text-white/70" data-nav="about">About</a>
-      <a data-i18n="nav.contact" href="/contact.html" class="hover:text-white/70" data-nav="contact">Contact</a>
+
+    <!-- Desktop controls -->
+    <div class="hidden md:flex items-center gap-2">
+      <button id="megaBtn" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10" aria-haspopup="true" aria-expanded="false">Menu</button>
+      <a id="ctaMessageTop" href="#" class="rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Message me first</a>
       <button id="langToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10" aria-label="Toggle language">EN/HE</button>
-      <button id="themeToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10"><span data-i18n="nav.theme">Theme</span></button>
-      <a id="ctaMessageTop" href="#" class="rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400" data-i18n="cta.message">Message me first</a>
-    </nav>
-    <button id="menuBtn" class="md:hidden rounded-lg border border-white/10 px-3 py-1">Menu</button>
+      <button id="themeToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10">Theme</button>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button id="hamburgerBtn" class="md:hidden rounded-lg border border-white/10 px-3 py-1" aria-label="Open menu">☰</button>
   </div>
-  <div id="mobileMenu" class="hidden border-t border-white/10 md:hidden">
-    <div class="mx-auto max-w-6xl px-4 py-3 space-y-2">
-      <a data-i18n="nav.home" href="/" class="block" data-nav="home">Home</a>
-      <a data-i18n="nav.how" href="/how.html" class="block" data-nav="how">How it works</a>
-      <a data-i18n="nav.deliverables" href="/what-you-get.html" class="block" data-nav="deliverables">What you get</a>
-      <a data-i18n="nav.packages" href="/packages.html" class="block" data-nav="packages">Packages</a>
-      <a data-i18n="nav.ethics" href="/ethics.html" class="block" data-nav="ethics">Ethics</a>
-      <a data-i18n="nav.faq" href="/faq.html" class="block" data-nav="faq">FAQ</a>
-      <a data-i18n="nav.about" href="/about.html" class="block" data-nav="about">About</a>
-      <a data-i18n="nav.contact" href="/contact.html" class="block" data-nav="contact">Contact</a>
-      <button id="langToggleMobile" class="mt-2 inline-block rounded-lg border border-white/10 px-4 py-2">EN/HE</button>
+
+  <!-- Mega Menu panel (desktop) -->
+  <div id="megaPanel" class="hidden border-t border-white/10 bg-neutral-950/95 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-8 grid md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-sm uppercase text-white/50">Audit</h3>
+        <ul class="mt-3 space-y-2">
+          <li><a href="/how.html" class="block rounded-lg p-3 hover:bg-white/5">
+            <div class="font-semibold">How it works</div>
+            <div class="text-sm text-white/70">Discover → Analyze → Reduce → Keep Safe</div>
+          </a></li>
+          <li><a href="/what-you-get.html" class="block rounded-lg p-3 hover:bg-white/5">
+            <div class="font-semibold">What you get</div>
+            <div class="text-sm text-white/70">Report, screenshots, and guides</div>
+          </a></li>
+          <li><a href="/packages.html" class="block rounded-lg p-3 hover:bg-white/5">
+            <div class="font-semibold">Packages</div>
+            <div class="text-sm text-white/70">Quick Check, Standard, Deep Dive</div>
+          </a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm uppercase text-white/50">Trust & Ethics</h3>
+        <ul class="mt-3 space-y-2">
+          <li><a href="/ethics.html" class="block rounded-lg p-3 hover:bg-white/5">
+            <div class="font-semibold">Ethics</div>
+            <div class="text-sm text-white/70">Consent-only, public-view audits</div>
+          </a></li>
+          <li><a href="/faq.html" class="block rounded-lg p-3 hover:bg-white/5">
+            <div class="font-semibold">FAQ</div>
+            <div class="text-sm text-white/70">No passwords, no friending, no bypassing privacy</div>
+          </a></li>
+          <li><a href="/about.html" class="block rounded-lg p-3 hover:bg-white/5">
+            <div class="font-semibold">About</div>
+            <div class="text-sm text-white/70">Background & privacy stance</div>
+          </a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="text-sm uppercase text-white/50">Get in touch</h3>
+        <ul class="mt-3 space-y-2">
+          <li><a href="/contact.html" class="block rounded-lg p-3 hover:bg-white/5">
+            <div class="font-semibold">Contact</div>
+            <div class="text-sm text-white/70">How to start and what to expect</div>
+          </a></li>
+          <li><a id="ctaMessageTopMega" href="#" class="block rounded-lg p-3 bg-emerald-500/10 hover:bg-emerald-500/20">
+            <div class="font-semibold">Message me first</div>
+            <div class="text-sm text-white/70">WhatsApp Business</div>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden border-t border-white/10 md:hidden bg-neutral-950">
+    <div class="mx-auto max-w-6xl px-4 py-4 space-y-2">
+      <a href="/" class="block">Home</a>
+      <a href="/how.html" class="block">How it works</a>
+      <a href="/what-you-get.html" class="block">What you get</a>
+      <a href="/packages.html" class="block">Packages</a>
+      <a href="/ethics.html" class="block">Ethics</a>
+      <a href="/faq.html" class="block">FAQ</a>
+      <a href="/about.html" class="block">About</a>
+      <a href="/contact.html" class="block">Contact</a>
+      <div class="pt-2 flex items-center gap-2">
+        <button id="langToggleMobile" class="rounded-lg border border-white/10 px-3 py-1">EN/HE</button>
+        <button id="themeToggleMobile" class="rounded-lg border border-white/10 px-3 py-1">Theme</button>
+        <a id="ctaMessageTopMobile" href="#" class="ml-auto rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Message</a>
+      </div>
     </div>
   </div>
 </header>
+
