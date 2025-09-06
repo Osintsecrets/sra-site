@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Social Risk Audit — See your Facebook the way a stranger does</title>
+  <meta name="description" content="An independent Facebook exposure audit. We show what your public Facebook reveals so you can decide what to change. Consent-only, public-view, evidence-based." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Social Risk Audit" />
+  <meta property="og:description" content="See your Facebook the way a stranger does. Consent-only, public-view audits. You stay in control." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/images/og-cover.jpg" />
+  <meta property="og:url" content="https://<your-username>.github.io/<your-repo>/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Social Risk Audit" />
+  <meta name="twitter:description" content="See your Facebook the way a stranger does." />
+  <meta name="twitter:image" content="/assets/images/og-cover.jpg" />
+
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (minimal)
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', 'Helvetica Neue', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="/assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans" data-intake-url="https://example.com/intake-consent" data-message-url="https://wa.me/XXXXXXXXXXX" data-facebook-page="https://www.facebook.com/YourPage" data-og-image="/assets/images/og-cover.jpg">
+  <a href="#main" class="absolute left-2 top-2 z-[100] rounded-md bg-white/10 px-2 py-1 text-xs backdrop-blur hover:bg-white/20 focus:outline-none focus:ring">Skip to content</a>
+
+  <!-- Announcement -->
+  <div class="w-full bg-emerald-500/10 border-b border-emerald-400/20 text-emerald-200 text-center text-sm py-2">
+    Consent-only, public-view audits. Educational. You stay in control.
+  </div>
+
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-8 rounded-lg bg-white/10"></div>
+        <span class="text-lg font-extrabold tracking-tight">Social Risk Audit</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#how" class="hover:text-white/70">How it works</a>
+        <a href="#deliverables" class="hover:text-white/70">What you get</a>
+        <a href="#packages" class="hover:text-white/70">Packages</a>
+        <a href="#ethics" class="hover:text-white/70">Ethics</a>
+        <a href="#faq" class="hover:text-white/70">FAQ</a>
+        <button id="themeToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10">Theme</button>
+        <a id="ctaMessageTop" href="#" class="rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Message me first</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden rounded-lg border border-white/10 px-3 py-1">Menu</button>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 md:hidden">
+      <div class="mx-auto max-w-6xl px-4 py-3 space-y-2">
+        <a href="#how" class="block">How it works</a>
+        <a href="#deliverables" class="block">What you get</a>
+        <a href="#packages" class="block">Packages</a>
+        <a href="#ethics" class="block">Ethics</a>
+        <a href="#faq" class="block">FAQ</a>
+        <a id="ctaMessageTopMobile" href="#" class="mt-2 inline-block rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Message me first</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-600/20 via-neutral-900 to-neutral-950"></div>
+    <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
+      <div class="max-w-2xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">See your Facebook the way a stranger does.</h1>
+        <p class="mt-4 text-lg text-white/70">We run an independent, consent-only exposure audit of your public Facebook. You’ll see what’s visible, how it could be misused, and what options you have. You stay in control.</p>
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a id="ctaStartHero" href="#" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 font-semibold text-neutral-900 hover:bg-white/90">Start my audit</a>
+          <a id="ctaMessageHero" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10">Message me first</a>
+        </div>
+        <p class="mt-3 text-xs text-white/50">No logins. No friend requests. Public-view only. Evidence-based.</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- How it works -->
+    <section id="how" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8">
+        <h2 class="text-3xl font-extrabold">How it works</h2>
+        <p class="mt-2 text-white/70">The DARK Threat Model: a simple, transparent process that surfaces what matters.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-4">
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold">Consent & Transparency</h3>
+          <p class="mt-2 text-white/70">Before anything begins, you’ll get a clear explanation and sign a consent form. We proceed only when you confirm you understand the scope.</p>
+          <ul class="mt-4 list-disc pl-5 text-white/70 space-y-1">
+            <li>Open Source Intelligence only</li>
+            <li>No login, no password requests</li>
+            <li>No attempts to bypass privacy</li>
+            <li>Public-view exactly as a stranger</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold">Discover</h3>
+          <p class="mt-2 text-white/70">We review your public Facebook like a stranger would and identify high-risk data points (posts, photos, tags, About fields, likes, groups, events).</p>
+          <p class="mt-2 text-white/70">We don’t list everything—only what a bad actor would target first.</p>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold">Analyze</h3>
+          <p class="mt-2 text-white/70">Each data point is assessed for realistic misuse (impersonation, harassment, social engineering, stalking). We include a fictional yet plausible threat simulation.</p>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold">Reduce & Keep Safe</h3>
+          <p class="mt-2 text-white/70">You receive a Facebook Privacy Guide and a long-term Keep Safe guide. They show options—you decide what to keep public or change.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- What you get -->
+    <section id="deliverables" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8">
+        <h2 class="text-3xl font-extrabold">What you get</h2>
+        <p class="mt-2 text-white/70">Clear documentation, screenshot evidence, and practical guidance—without tech jargon.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-lg font-bold">Risk Report</h3>
+          <ul class="mt-3 list-disc pl-5 text-white/70 space-y-1">
+            <li>Concise summary of exposed data points</li>
+            <li>Where they were found (with links/screens)</li>
+            <li>Why they matter & plausible misuse</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-lg font-bold">Evidence Folder</h3>
+          <ul class="mt-3 list-disc pl-5 text-white/70 space-y-1">
+            <li>Screen captures documenting each finding</li>
+            <li>Simple filenames + notes for reference</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-lg font-bold">Guides (PDF)</h3>
+          <ul class="mt-3 list-disc pl-5 text-white/70 space-y-1">
+            <li>Facebook Privacy Guide (step-by-step)</li>
+            <li>Keep Safe: long-term digital hygiene</li>
+            <li>Educational and non-prescriptive</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8">
+        <h2 class="text-3xl font-extrabold">Packages</h2>
+        <p class="mt-2 text-white/70">Choose how deep to go. You can also add focused pivots.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold">Quick Check</h3>
+          <p class="mt-2 text-white/70">Recent 12 months, 8–12 key risks, screenshots, short summary.</p>
+          <a id="ctaStartQuick" href="#" class="mt-4 inline-block rounded-xl bg-white px-4 py-2 font-semibold text-neutral-900 hover:bg-white/90">Start Quick Check</a>
+        </div>
+        <div class="rounded-2xl border border-emerald-400/30 bg-emerald-500/5 p-6">
+          <h3 class="text-xl font-bold">Standard Audit</h3>
+          <p class="mt-2 text-white/70">3–5 years, DARK model, full write-ups + simulation, evidence + guides.</p>
+          <a id="ctaStartStandard" href="#" class="mt-4 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Start Standard</a>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="text-xl font-bold">Deep Dive</h3>
+          <p class="mt-2 text-white/70">Full history + pivots (IG, phone/email), expanded simulation, broader evidence.</p>
+          <a id="ctaStartDeep" href="#" class="mt-4 inline-block rounded-xl border border-white/20 px-4 py-2 font-semibold hover:bg-white/10">Discuss Deep Dive</a>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h4 class="font-bold">Add-ons (focused pivots)</h4>
+        <p class="mt-2 text-white/70">Phone/email pivot, username reuse, employer/city, photo/location, group history. Open-source only.</p>
+      </div>
+    </section>
+
+    <!-- Ethics & Consent -->
+    <section id="ethics" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8">
+        <h2 class="text-3xl font-extrabold">Ethics & Consent</h2>
+        <p class="mt-2 text-white/70">This service exists to protect, educate, and empower—not to exploit.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <ul class="list-disc pl-5 text-white/70 space-y-1">
+            <li>I only audit Facebook accounts with signed consent from the owner.</li>
+            <li>No audits on behalf of spouses, partners, or third parties.</li>
+            <li>Open Source Intelligence only—publicly available info.</li>
+            <li>I do not login, friend, or connect with you.</li>
+            <li>I do not attempt to bypass privacy or protections.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <p class="text-white/70">You’ll know exactly what I’ll do before I begin. Every audit starts with transparency, consent, and accountability.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why this matters -->
+    <section id="why" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8">
+        <h2 class="text-3xl font-extrabold">Why this matters</h2>
+        <p class="mt-2 text-white/70">Online exposure can enable impersonation, harassment, doxxing, and targeted scams. Clarity helps you choose your level of openness.</p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold">Clarity</h3>
+          <p class="mt-2 text-white/70">See what strangers can actually learn about you from public Facebook data.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold">Control</h3>
+          <p class="mt-2 text-white/70">You decide what to keep public, restrict, or remove—no prescriptions.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold">Proof</h3>
+          <p class="mt-2 text-white/70">Every finding is documented with screenshots so you can verify and act.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8">
+        <h2 class="text-3xl font-extrabold">FAQ</h2>
+        <p class="mt-2 text-white/70">Straight answers to common questions.</p>
+      </div>
+
+      <div class="space-y-4">
+        <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-left font-semibold">
+            Do you need my password or to friend me?
+            <span class="ml-4 text-white/50 group-open:rotate-180">⌄</span>
+          </summary>
+          <p class="mt-2 text-white/70">No. This audit is public-view only. No logins, no friend requests, and no bypassing privacy.</p>
+        </details>
+
+        <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-left font-semibold">
+            Will you tell me exactly what to change?
+            <span class="ml-4 text-white/50 group-open:rotate-180">⌄</span>
+          </summary>
+          <p class="mt-2 text-white/70">I’ll show you what’s exposed and provide step-by-step guides. You choose what to change based on your goals.</p>
+        </details>
+
+        <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-left font-semibold">
+            Can you audit someone else for me?
+            <span class="ml-4 text-white/50 group-open:rotate-180">⌄</span>
+          </summary>
+          <p class="mt-2 text-white/70">No. I only audit accounts with the owner’s signed consent.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mx-auto max-w-6xl px-4 pb-20">
+      <div class="rounded-2xl border border-emerald-400/30 bg-emerald-500/5 p-8 md:p-10">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Ready when you are.</h2>
+        <p class="mt-2 text-white/70">Start with a message, or go straight to the intake & consent form.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a id="ctaMessageBottom" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10">Message me first</a>
+          <a id="ctaStartBottom" href="#" class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400">Start my audit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-white/50">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+        <p>© 2025 Social Risk Audit</p>
+        <p>Created by Jeremiah • Made for GitHub Pages</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" type="module"></script>
+</body>
+</html>
