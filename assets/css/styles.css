@@ -1,0 +1,4 @@
+/* Minimal extras beyond Tailwind; keep it tiny for performance */
+::selection { background: rgba(16, 185, 129, 0.25); }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
