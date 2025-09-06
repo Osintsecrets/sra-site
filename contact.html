@@ -40,8 +40,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="assets/js/lang-toggle.js"></script>
   <script type="module">
-    import { sraInit } from 'assets/js/main.js';
-    await sraInit('contact');
+    import { sraInit } from './assets/js/main.js';
+    (async () => { await sraInit('contact'); })();
   </script>
 </body>
 </html>
