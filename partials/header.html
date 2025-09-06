@@ -9,11 +9,12 @@
     <div class="hidden md:flex items-center gap-2">
       <button id="megaBtn" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10" aria-haspopup="true" aria-expanded="false">Menu</button>
       <a id="ctaMessageTop" href="#" class="rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400" data-i18n="cta.message">Message me first</a>
-      <div id="language-toggle" class="toggle-switch-container language-toggle">
+      <!-- Language Toggle (desktop) -->
+      <div id="language-toggle" class="toggle-switch-container" aria-label="Language toggle" role="switch" aria-checked="false">
         <div class="toggle-switch-slider"></div>
         <div class="toggle-switch-labels">
           <span class="toggle-switch-label en-label">English</span>
-          <span class="toggle-switch-label he-label">עִברִית</span>
+          <span class="toggle-switch-label he-label">עברית</span>
         </div>
       </div>
       <button id="themeToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10" data-i18n="nav.theme">Theme</button>
@@ -103,7 +104,7 @@
           <div class="toggle-switch-slider"></div>
           <div class="toggle-switch-labels">
             <span class="toggle-switch-label en-label">English</span>
-            <span class="toggle-switch-label he-label">עִברִית</span>
+            <span class="toggle-switch-label he-label">עברית</span>
           </div>
         </div>
         <button id="themeToggleMobile" class="rounded-lg border border-white/10 px-3 py-1" data-i18n="nav.theme">Theme</button>
