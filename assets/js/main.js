@@ -1,12 +1,36 @@
 import { mountLayout } from './layout.js';
 import { SRAi18n } from './i18n.js';
 
+function applyLanguage(i18n, lang) {
+  const html = document.documentElement;
+  const body = document.body;
+  const code = (lang === 'he' ? 'he' : 'en');
+  localStorage.setItem('language', code);
+
+  body.classList.toggle('hebrew-mode', code === 'he');
+  body.classList.toggle('english-mode', code !== 'he');
+  html.setAttribute('dir', code === 'he' ? 'rtl' : 'ltr');
+  html.setAttribute('lang', code);
+
+  i18n.setLanguage(code);
+}
+
+function wireLanguageToggles(i18n) {
+  document.addEventListener('click', (e) => {
+    const el = e.target.closest('#language-toggle, #language-toggle-mobile');
+    if (!el) return;
+    const current = localStorage.getItem('language') || 'en';
+    const next = current === 'he' ? 'en' : 'he';
+    applyLanguage(i18n, next);
+  });
+}
+
 export async function sraInit(activePage) {
   await mountLayout(activePage);
 
   // i18n
   const i18n = new SRAi18n({
-    defaultLang: localStorage.getItem('sra_lang') || 'en',
+    defaultLang: 'en',
     supported: ['en','he'],
     dictionaries: {
       en: 'assets/i18n/en.json',
@@ -16,17 +40,9 @@ export async function sraInit(activePage) {
   await i18n.init();
   window.__sra_i18n = i18n;
 
-  // Respect language chosen by the slider (if set before this script runs)
-  try {
-    const savedLanguage = localStorage.getItem('language'); // 'english' | 'hebrew'
-    if (savedLanguage === 'hebrew' && window.__sra_i18n?.setLang) {
-      window.__sra_i18n.setLang('he');
-      document.documentElement.setAttribute('lang','he');
-      document.documentElement.setAttribute('dir','rtl');
-      document.body.classList.add('hebrew-mode');
-      document.body.classList.remove('english-mode');
-    }
-  } catch (_) {}
+  const saved = localStorage.getItem('language') || 'en';
+  applyLanguage(i18n, saved);
+  wireLanguageToggles(i18n);
 
   // theme toggle
   const themeToggle = document.getElementById('themeToggle');
@@ -39,29 +55,6 @@ export async function sraInit(activePage) {
     const saved = localStorage.getItem('theme');
     if (saved === 'light') document.documentElement.classList.remove('dark');
   }
-
-  // language toggle switch
-  const langToggles = document.querySelectorAll('.language-toggle');
-  const updateLanguage = (lang) => {
-    document.querySelectorAll('[data-en][data-he]').forEach(el => {
-      el.textContent = lang === 'he' ? el.getAttribute('data-he') : el.getAttribute('data-en');
-    });
-  };
-  const applyLang = (lang) => {
-    const isHebrew = lang === 'he';
-    document.body.classList.toggle('hebrew-mode', isHebrew);
-    document.body.classList.toggle('english-mode', !isHebrew);
-    updateLanguage(lang);
-    localStorage.setItem('language', isHebrew ? 'hebrew' : 'english');
-    i18n.setLang(lang);
-  };
-  applyLang(i18n.current);
-  langToggles.forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const next = document.body.classList.contains('hebrew-mode') ? 'en' : 'he';
-      applyLang(next);
-    });
-  });
 
   // CTAs
   const LINKS = {
