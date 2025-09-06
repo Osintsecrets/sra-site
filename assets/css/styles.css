@@ -2,3 +2,16 @@
 ::selection { background: rgba(16, 185, 129, 0.25); }
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
+
+/* Tabs */
+.sra-tab-active { background: rgba(255,255,255,0.08); color: #fff; }
+.sra-tab { transition: background .2s ease, color .2s ease; }
+
+/* Inputs */
+.sra-input {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: .6rem .75rem;
+  border-radius: .75rem;
+}
