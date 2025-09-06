@@ -2,8 +2,8 @@
   "name": "Social Risk Audit",
   "short_name": "SRA",
   "icons": [
-    { "src": "/assets/favicon/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
-    { "src": "/assets/favicon/favicon.ico", "type": "image/x-icon", "sizes": "48x48" }
+    { "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "favicon.ico", "type": "image/x-icon", "sizes": "48x48" }
   ],
   "theme_color": "#0a0a0a",
   "background_color": "#0a0a0a",
