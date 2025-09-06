@@ -4,59 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Packages — Social Risk Audit</title>
-  <meta name="description" content="Choose how deep to go with Quick Check, Standard Audit, or Deep Dive." />
-  <meta property="og:title" content="Packages — Social Risk Audit" />
-  <meta property="og:description" content="Choose how deep to go with Quick Check, Standard Audit, or Deep Dive." />
-  <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/images/no background black.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Packages — Social Risk Audit" />
-  <meta name="twitter:description" content="Choose how deep to go with Quick Check, Standard Audit, or Deep Dive." />
-  <meta name="twitter:image" content="/assets/images/no background black.png" />
-  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
-  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="/assets/css/styles.css" rel="stylesheet" />
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
   <div id="sra-header"></div>
-
   <main id="main">
-    <section class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="packages.title">Packages</h2>
-        <p class="mt-2 text-white/70">Choose how deep to go. You can also add focused pivots.</p>
-      </div>
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Quick Check</h3>
-          <p class="mt-2 text-white/70">Recent 12 months, 8–12 key risks, screenshots, short summary.</p>
-          <a id="ctaStartQuick" href="#" class="mt-4 inline-block rounded-xl bg-white px-4 py-2 font-semibold text-neutral-900 hover:bg-white/90">Start Quick Check</a>
-        </div>
-        <div class="rounded-2xl border border-emerald-400/30 bg-emerald-500/5 p-6">
-          <h3 class="text-xl font-bold">Standard Audit</h3>
-          <p class="mt-2 text-white/70">3–5 years, DARK model, full write-ups + simulation, evidence + guides.</p>
-          <a id="ctaStartStandard" href="#" class="mt-4 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Start Standard</a>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Deep Dive</h3>
-          <p class="mt-2 text-white/70">Full history + pivots (IG, phone/email), expanded simulation, broader evidence.</p>
-          <a id="ctaStartDeep" href="#" class="mt-4 inline-block rounded-xl border border-white/20 px-4 py-2 font-semibold hover:bg-white/10">Discuss Deep Dive</a>
-        </div>
-      </div>
-      <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
-        <h4 class="font-bold">Add-ons (focused pivots)</h4>
-        <p class="mt-2 text-white/70">Phone/email pivot, username reuse, employer/city, photo/location, group history. Open-source only.</p>
-      </div>
+    <section class="mx-auto max-w-4xl px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold">Packages</h1>
+      <p class="mt-3 text-white/70">Placeholder: Quick Check, Standard Audit, Deep Dive, plus focused pivots.</p>
     </section>
   </main>
-
   <div id="sra-footer"></div>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="/assets/js/i18n.js"></script>
   <script type="module">
     import { sraInit } from '/assets/js/main.js';
     await sraInit('packages');

@@ -9,13 +9,10 @@
   <meta property="og:description" content="Who I am, why I care about privacy, and how I think about OSINT." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/images/no background black.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About — Social Risk Audit" />
-  <meta name="twitter:description" content="Who I am, why I care about privacy, and how I think about OSINT." />
-  <meta name="twitter:image" content="/assets/images/no background black.png" />
   <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="/assets/css/styles.css" rel="stylesheet" />
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
@@ -23,68 +20,54 @@
 
   <main id="main">
     <section class="mx-auto max-w-3xl px-4 py-12 md:py-16">
-      <h1 class="text-4xl md:text-5xl font-extrabold" data-i18n="about.title">About</h1>
-      <p class="mt-3 text-white/70" data-i18n="about.tagline">Who I am, why I care about privacy, and how I think about OSINT.</p>
+      <div class="flex items-center gap-3">
+        <img src="/assets/images/no background white.png" alt="Social Risk Audit logo" class="h-10 w-auto opacity-90" />
+        <h1 class="text-4xl md:text-5xl font-extrabold">About</h1>
+      </div>
+      <p class="mt-3 text-white/70">Who I am, why I care about privacy, and how I think about OSINT.</p>
 
       <article class="mt-10 space-y-10 leading-relaxed text-white/90">
         <section>
           <h2 class="text-2xl font-bold">The Beginning: Discovering OSINT</h2>
-          <p>My journey into Open-Source Intelligence (OSINT) started with curiosity. A conversation between Griffin Glynn and Micah Hoffman on David Bombal’s channel pulled me in. OSINT wasn’t just for pros—it was a mindset anyone could learn: explore, verify, connect dots.</p>
+          <p>My journey into Open-Source Intelligence (OSINT) started with curiosity. A conversation between Griffin Glynn and Micah Hoffman on David Bombal’s channel pulled me in. I realized OSINT isn’t reserved for insiders—you can learn it with the right mindset: explore, verify, and connect dots.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-bold">First Steps: Applying OSINT</h2>
-          <p>I built a giant Start.me collection, tested tools, and—only with consent—ran small investigations for friends. Each case felt like a puzzle: searching, cross-referencing, and finding the key detail that unlocks the rest.</p>
+          <p>I built a huge Start.me list of tools, tested them, and—with consent—ran small investigations for friends. Each case felt like a puzzle: searching, cross-referencing, uncovering the detail that opens everything else.</p>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold">OSINT for Good: The Birth of OSINT Secrets</h2>
-          <p>Inspired by Trace Labs, Skull Games, and Operation Safe Escape, I realized OSINT must be used responsibly. I created OSINT Secrets to share knowledge, make OSINT accessible, and promote ethical use.</p>
+          <h2 class="text-2xl font-bold">OSINT for Good</h2>
+          <p>Inspired by groups like Trace Labs, Skull Games, and Operation Safe Escape, I focused on responsibility. Knowledge should be shared and used to protect—not to harm. That thinking led to OSINT Secrets: make OSINT accessible, ethical, and useful.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-bold">Choosing the Light</h2>
-          <p>I once imagined hunting bad actors. Over time, I understood the emotional cost of that work—something Nico Dekens (“The Dutch OSINT Guy”) speaks about openly. I chose education: helping people protect themselves rather than chasing darkness.</p>
+          <p>I once pictured myself hunting bad actors. Over time I understood the emotional cost of that work—something Nico Dekens (“The Dutch OSINT Guy”) talks about openly. I chose a different path: education. Help people avoid harm by understanding exposure.</p>
+          <p>My Social Risk Audit work comes from that choice: surface what’s public, explain realistic misuse, and put the decision to change in your hands.</p>
         </section>
 
         <section>
           <h2 class="text-2xl font-bold">Ethics: Privacy First</h2>
-          <p>Doxing is not an option. Public doesn’t mean fair game. Privacy is a basic human right. My role is to analyze and educate—not to judge or punish. If there’s a crime, the authorities handle it.</p>
+          <ul class="mt-3 list-disc pl-5 space-y-2">
+            <li>Privacy is a basic human right—full stop.</li>
+            <li>Public does not mean “fair game.” Doxing is unacceptable.</li>
+            <li>Disagreement or politics never justify exposing someone.</li>
+            <li>My role is to analyze and educate—not to judge or punish. If there’s a crime, the authorities handle it.</li>
+          </ul>
         </section>
 
         <section>
           <h2 class="text-2xl font-bold">Always Learning</h2>
-          <p>OSINT changes constantly. I keep studying—interviews, books, podcasts, tools. The goal is steady: pursue knowledge and use it responsibly.</p>
-        </section>
-
-        <section class="border-t border-white/10 pt-6">
-          <h2 class="text-2xl font-bold">Where this meets Social Risk Audit</h2>
-          <p>Today, I apply that philosophy to Facebook exposure audits. I surface what’s public, explain how it could be misused, and give you tools to reduce exposure. You decide your comfort level.</p>
-        </section>
-
-        <section class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">My stance on privacy</h3>
-          <ul class="mt-3 list-disc pl-5">
-            <li>Privacy is a basic human right—full stop.</li>
-            <li>Disagreement or politics never justify exposing someone.</li>
-            <li>Education beats humiliation. Clarity beats fear.</li>
-          </ul>
+          <p>OSINT evolves constantly. I keep studying—interviews, books, podcasts, tools, and methods. The goal stays the same: pursue knowledge and use it responsibly.</p>
         </section>
       </article>
-
-      <div class="mt-10 flex items-center gap-3">
-        <a href="/" class="rounded-xl bg-white px-5 py-3 font-semibold text-neutral-900 hover:bg-white/90" data-i18n="cta.start">Start my audit</a>
-        <a id="ctaMessageAbout" href="#" class="rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10" data-i18n="cta.message">Message me first</a>
-      </div>
     </section>
   </main>
 
   <div id="sra-footer"></div>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="/assets/js/i18n.js"></script>
+
   <script type="module">
     import { sraInit } from '/assets/js/main.js';
     await sraInit('about');
