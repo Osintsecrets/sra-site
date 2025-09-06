@@ -49,9 +49,10 @@
     tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="assets/js/lang-toggle.js"></script>
   <script type="module">
-    import { sraInit } from 'assets/js/main.js';
-    await sraInit('faq');
+    import { sraInit } from './assets/js/main.js';
+    (async () => { await sraInit('faq'); })();
   </script>
 </body>
 </html>

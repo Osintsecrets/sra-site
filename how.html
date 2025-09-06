@@ -17,10 +17,10 @@
     </section>
   </main>
   <div id="sra-footer"></div>
-  <script defer src="/assets/js/lang-toggle.js"></script>
+  <script defer src="assets/js/lang-toggle.js"></script>
   <script type="module">
-    import { sraInit } from 'assets/js/main.js';
-    await sraInit('how');
+    import { sraInit } from './assets/js/main.js';
+    (async () => { await sraInit('how'); })();
   </script>
 </body>
 </html>

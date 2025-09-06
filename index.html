@@ -54,7 +54,7 @@
             </a>
           </div>
         </div>
-        <img src="assets/images/no background white.png" alt="Social Risk Audit logo" class="mt-10 md:mt-0 md:h-72 lg:h-96 w-auto opacity-90 md:ml-10" />
+        <img src="assets/images/no background white.png" alt="Social Risk Audit logo" class="hidden md:block h-auto w-64 sm:w-80 md:w-[28rem] lg:w-[32rem] opacity-90" />
       </div>
     </section>
   </main>
@@ -66,8 +66,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="assets/js/lang-toggle.js"></script>
   <script type="module">
-    import { sraInit } from 'assets/js/main.js';
-    await sraInit('home');
+    import { sraInit } from './assets/js/main.js';
+    (async () => { await sraInit('home'); })();
   </script>
 </body>
 </html>
