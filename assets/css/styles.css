@@ -15,3 +15,10 @@ details > summary::-webkit-details-marker { display: none; }
   padding: .6rem .75rem;
   border-radius: .75rem;
 }
+
+/* RTL helpers */
+html[dir="rtl"] body { direction: rtl; }
+html[dir="rtl"] .text-left { text-align: right; }
+html[dir="rtl"] .text-right { text-align: left; }
+/* Flip common gap/padding nuances only if needed; Tailwind handles most layout well in RTL. */
+/* Optional: tweak FAQ summary arrow if you added icons, not needed now. */

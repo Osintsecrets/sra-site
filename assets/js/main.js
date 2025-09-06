@@ -1,8 +1,30 @@
+// ----- i18n init & language toggle -----
+import { SRAi18n } from '/assets/js/i18n.js';
+
 /* Wire up menu, theme, and CTA links. Update the data- attributes below with your real URLs. */
 const LINKS = {
   intake: document.body.dataset?.intakeUrl || 'https://example.com/intake-consent',
   message: document.body.dataset?.messageUrl || 'https://wa.me/XXXXXXXXXXX'
 };
+
+const i18n = new SRAi18n({
+  defaultLang: 'en',
+  supported: ['en', 'he'],
+  dictionaries: {
+    en: '/assets/i18n/en.json',
+    he: '/assets/i18n/he.json'
+  }
+});
+await i18n.init();
+
+// Hook toggles
+['langToggle', 'langToggleMobile'].forEach(id => {
+  const btn = document.getElementById(id);
+  if (btn) btn.addEventListener('click', () => {
+    const next = i18n.current === 'en' ? 'he' : 'en';
+    i18n.setLang(next);
+  });
+});
 
 // Mobile menu
 const menuBtn = document.getElementById('menuBtn');
