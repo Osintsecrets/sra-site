@@ -12,11 +12,6 @@ export async function sraInit(activePage) {
   });
   await i18n.init();
 
-  // mobile menu
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (menuBtn && mobileMenu) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
   // theme toggle
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) {
@@ -53,9 +48,67 @@ export async function sraInit(activePage) {
   setHref('ctaStartStandard', LINKS.intake);
   setHref('ctaStartDeep', LINKS.message);
   setHref('ctaStartBottom', LINKS.intake);
-  setHref('ctaMessageEstimator', LINKS.message);
-  setHref('ctaStartEstimator', LINKS.intake);
   setHref('ctaMessageAbout', LINKS.message);
+
+  // ----- Mega Menu (desktop) -----
+  const megaBtn = document.getElementById('megaBtn');
+  const megaPanel = document.getElementById('megaPanel');
+  let megaTimer;
+
+  function openMega() {
+    if (!megaPanel) return;
+    megaPanel.classList.remove('hidden');
+    megaPanel.setAttribute('data-open','true');
+    megaBtn?.setAttribute('aria-expanded','true');
+  }
+  function closeMega() {
+    if (!megaPanel) return;
+    megaPanel.classList.add('hidden');
+    megaPanel.removeAttribute('data-open');
+    megaBtn?.setAttribute('aria-expanded','false');
+  }
+  function toggleMega() {
+    if (!megaPanel) return;
+    if (megaPanel.classList.contains('hidden')) openMega(); else closeMega();
+  }
+
+  // Click to open/close
+  megaBtn?.addEventListener('click', (e)=>{ e.preventDefault(); toggleMega(); });
+
+  // Hover open/close for pointer devices
+  const headerEl = document.querySelector('header');
+  if (headerEl && window.matchMedia('(pointer:fine)').matches) {
+    headerEl.addEventListener('mouseenter', ()=>{ clearTimeout(megaTimer); openMega(); });
+    headerEl.addEventListener('mouseleave', ()=>{ megaTimer = setTimeout(closeMega, 120); });
+  }
+
+  // Close on outside click / ESC
+  document.addEventListener('click', (e)=>{
+    if (!megaPanel || !megaBtn) return;
+    const within = megaPanel.contains(e.target) || megaBtn.contains(e.target);
+    if (!within) closeMega();
+  });
+  document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeMega(); });
+
+  // Wire "Message" link inside mega
+  setHref('ctaMessageTopMega', LINKS.message);
+
+  // ----- Mobile hamburger -----
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenuEl = document.getElementById('mobileMenu');
+  hamburgerBtn?.addEventListener('click', ()=>{
+    mobileMenuEl?.classList.toggle('hidden');
+  });
+
+  // Mobile theme toggle mirrors desktop
+  const themeToggleMobile = document.getElementById('themeToggleMobile');
+  if (themeToggleMobile) {
+    themeToggleMobile.addEventListener('click', ()=>{
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  }
 }
 
 export function initTabs() {
