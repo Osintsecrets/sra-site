@@ -11,6 +11,19 @@ export async function sraInit(activePage) {
     dictionaries: { en: '/assets/i18n/en.json', he: '/assets/i18n/he.json' }
   });
   await i18n.init();
+  window.__sra_i18n = i18n;
+
+  // Respect language chosen by the slider (if set before this script runs)
+  try {
+    const savedLanguage = localStorage.getItem('language'); // 'english' | 'hebrew'
+    if (savedLanguage === 'hebrew' && window.__sra_i18n?.setLang) {
+      window.__sra_i18n.setLang('he');
+      document.documentElement.setAttribute('lang','he');
+      document.documentElement.setAttribute('dir','rtl');
+      document.body.classList.add('hebrew-mode');
+      document.body.classList.remove('english-mode');
+    }
+  } catch (_) {}
 
   // theme toggle
   const themeToggle = document.getElementById('themeToggle');

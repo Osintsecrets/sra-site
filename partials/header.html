@@ -9,7 +9,14 @@
     <div class="hidden md:flex items-center gap-2">
       <button id="megaBtn" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10" aria-haspopup="true" aria-expanded="false">Menu</button>
       <a id="ctaMessageTop" href="#" class="rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Message me first</a>
-      <button id="langToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10" aria-label="Toggle language">EN/HE</button>
+      <!-- Language Toggle (desktop) -->
+      <div id="language-toggle" class="toggle-switch-container" aria-label="Language toggle" role="switch" aria-checked="false">
+        <div class="toggle-switch-slider"></div>
+        <div class="toggle-switch-labels">
+          <span class="toggle-switch-label en-label">English</span>
+          <span class="toggle-switch-label he-label">עברית</span>
+        </div>
+      </div>
       <button id="themeToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10">Theme</button>
     </div>
 
@@ -79,9 +86,16 @@
       <a href="/about.html" class="block">About</a>
       <a href="/contact.html" class="block">Contact</a>
       <div class="pt-2 flex items-center gap-2">
-        <button id="langToggleMobile" class="rounded-lg border border-white/10 px-3 py-1">EN/HE</button>
         <button id="themeToggleMobile" class="rounded-lg border border-white/10 px-3 py-1">Theme</button>
         <a id="ctaMessageTopMobile" href="#" class="ml-auto rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Message</a>
+      </div>
+      <!-- Language Toggle (mobile) -->
+      <div id="language-toggle-mobile" class="toggle-switch-container mt-3" aria-label="Language toggle" role="switch" aria-checked="false">
+        <div class="toggle-switch-slider"></div>
+        <div class="toggle-switch-labels">
+          <span class="toggle-switch-label en-label">English</span>
+          <span class="toggle-switch-label he-label">עברית</span>
+        </div>
       </div>
     </div>
   </div>
