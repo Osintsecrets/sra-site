@@ -59,17 +59,43 @@
     "message": "Message me first",
     "start": "Start my audit"
   },
+  "tiles": {
+    "how": {
+      "title": "How it works",
+      "desc": "The DARK process, step-by-step."
+    },
+    "what": {
+      "title": "What you get",
+      "desc": "Report, evidence, and guides."
+    },
+    "packages": {
+      "title": "Packages",
+      "desc": "Choose depth; add pivots."
+    },
+    "ethics": {
+      "title": "Ethics",
+      "desc": "Consent-only, public-view."
+    },
+    "about": {
+      "title": "About",
+      "desc": "Who I am and why I care."
+    }
+  },
   "how": {
-    "title": "How it works"
+    "title": "How it works",
+    "tagline": "The DARK process, step by step."
   },
   "deliverables": {
-    "title": "What you get"
+    "title": "What you get",
+    "tagline": "Risk report, evidence folder, and guides."
   },
   "packages": {
-    "title": "Packages"
+    "title": "Packages",
+    "tagline": "Choose depth; add focused pivots."
   },
   "ethics": {
-    "title": "Ethics & Consent"
+    "title": "Ethics & Consent",
+    "tagline": "This service exists to protect, educate, and empower—not to exploit."
   },
   "why": {
     "title": "Why this matters"
@@ -80,6 +106,10 @@
   "about": {
     "title": "About",
     "tagline": "Who I am, why I care about privacy, and how I think about OSINT."
+  },
+  "contact": {
+    "title": "Start here",
+    "tagline": "Consent-only, human-performed audits. Message me first if you have questions, or go straight to the intake form when ready."
   },
   "footer": {
     "copyright": "© 2025 Social Risk Audit",
