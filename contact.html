@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Social Risk Audit</title>
+  <meta name="description" content="Start your audit with a message or the intake form." />
+  <meta property="og:title" content="Contact — Social Risk Audit" />
+  <meta property="og:description" content="Start your audit with a message or the intake form." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/images/no background black.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — Social Risk Audit" />
+  <meta name="twitter:description" content="Start your audit with a message or the intake form." />
+  <meta name="twitter:image" content="/assets/images/no background black.png" />
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link href="/assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+  <div class="w-full bg-emerald-500/10 border-b border-emerald-400/20 text-emerald-200 text-center text-sm py-2" data-i18n="announcement">Consent-only, public-view audits. Educational. You stay in control.</div>
+  <div class="w-full border-b border-white/10 bg-white/5">
+    <div class="mx-auto max-w-6xl px-4 py-2 text-xs text-white/70 flex items-center gap-2">
+      <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+      <span class="font-semibold" data-i18n="ribbon.title">Manual Audit Promise:</span>
+      <span data-i18n="ribbon.copy">No bots, no scraping, no API. Every audit is performed by a human, reviewing only what’s publicly visible.</span>
+    </div>
+  </div>
+  <div id="sra-header"></div>
+
+  <main id="main">
+    <section class="mx-auto max-w-3xl px-4 py-16 text-center">
+      <h1 class="text-4xl font-extrabold" data-i18n="nav.contact">Start here</h1>
+      <p class="mt-4 text-white/70">Consent-only, human-performed audits. Message me first if you have questions, or go straight to the intake form when ready.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a id="ctaMessageTop" href="#" class="rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10" data-i18n="cta.message">Message me first</a>
+        <a id="ctaStartHero" href="#" class="rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400" data-i18n="cta.start">Start my audit</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="sra-footer"></div>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="/assets/js/i18n.js"></script>
+  <script type="module">
+    import { sraInit } from '/assets/js/main.js';
+    await sraInit('contact');
+  </script>
+</body>
+</html>

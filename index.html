@@ -10,49 +10,25 @@
   <meta property="og:title" content="Social Risk Audit" />
   <meta property="og:description" content="See your Facebook the way a stranger does. Consent-only, public-view audits. You stay in control." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/images/og-cover.jpg" />
+  <meta property="og:image" content="/assets/images/no background black.png" />
   <meta property="og:url" content="https://<your-username>.github.io/<your-repo>/" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Social Risk Audit" />
   <meta name="twitter:description" content="See your Facebook the way a stranger does." />
-  <meta name="twitter:image" content="/assets/images/og-cover.jpg" />
+  <meta name="twitter:image" content="/assets/images/no background black.png" />
 
   <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
-  <!-- Tailwind Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    // Tailwind config (minimal)
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', 'Helvetica Neue', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol']
-          }
-        }
-      }
-    }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="/assets/css/styles.css" rel="stylesheet" />
-  <script defer src="/assets/js/i18n.js"></script>
 </head>
-<body class="bg-neutral-950 text-neutral-100 font-sans" data-intake-url="https://example.com/intake-consent" data-message-url="https://wa.me/XXXXXXXXXXX" data-facebook-page="https://www.facebook.com/YourPage" data-og-image="/assets/images/og-cover.jpg">
+<body class="bg-neutral-950 text-neutral-100 font-sans">
   <a href="#main" class="absolute left-2 top-2 z-[100] rounded-md bg-white/10 px-2 py-1 text-xs backdrop-blur hover:bg-white/20 focus:outline-none focus:ring">Skip to content</a>
 
-  <!-- Announcement -->
-  <div class="w-full bg-emerald-500/10 border-b border-emerald-400/20 text-emerald-200 text-center text-sm py-2" data-i18n="announcement">
-    Consent-only, public-view audits. Educational. You stay in control.
-  </div>
-
-  <!-- Manual Audit Ribbon -->
+  <div class="w-full bg-emerald-500/10 border-b border-emerald-400/20 text-emerald-200 text-center text-sm py-2" data-i18n="announcement">Consent-only, public-view audits. Educational. You stay in control.</div>
   <div class="w-full border-b border-white/10 bg-white/5">
     <div class="mx-auto max-w-6xl px-4 py-2 text-xs text-white/70 flex items-center gap-2">
       <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -60,40 +36,7 @@
       <span data-i18n="ribbon.copy">No bots, no scraping, no API. Every audit is performed by a human, reviewing only what’s publicly visible.</span>
     </div>
   </div>
-
-  <!-- Nav -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <div class="flex items-center gap-3">
-        <div class="h-8 w-8 rounded-lg bg-white/10"></div>
-        <span class="text-lg font-extrabold tracking-tight">Social Risk Audit</span>
-      </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a data-i18n="nav.how" href="#how" class="hover:text-white/70">How it works</a>
-        <a data-i18n="nav.deliverables" href="#deliverables" class="hover:text-white/70">What you get</a>
-        <a data-i18n="nav.packages" href="#packages" class="hover:text-white/70">Packages</a>
-        <a data-i18n="nav.ethics" href="#ethics" class="hover:text-white/70">Ethics</a>
-        <a data-i18n="nav.faq" href="#faq" class="hover:text-white/70">FAQ</a>
-        <a data-i18n="nav.about" href="/about.html" class="hover:text-white/70">About</a>
-        <button id="langToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10" aria-label="Toggle language">EN/HE</button>
-        <button id="themeToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10"><span data-i18n="nav.theme">Theme</span></button>
-        <a id="ctaMessageTop" href="#" class="rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400" data-i18n="cta.message">Message me first</a>
-      </nav>
-      <button id="menuBtn" class="md:hidden rounded-lg border border-white/10 px-3 py-1">Menu</button>
-    </div>
-    <div id="mobileMenu" class="hidden border-t border-white/10 md:hidden">
-      <div class="mx-auto max-w-6xl px-4 py-3 space-y-2">
-        <a data-i18n="nav.how" href="#how" class="block">How it works</a>
-        <a data-i18n="nav.deliverables" href="#deliverables" class="block">What you get</a>
-        <a data-i18n="nav.packages" href="#packages" class="block">Packages</a>
-        <a data-i18n="nav.ethics" href="#ethics" class="block">Ethics</a>
-        <a data-i18n="nav.faq" href="#faq" class="block">FAQ</a>
-        <a data-i18n="nav.about" href="/about.html" class="block">About</a>
-        <button id="langToggleMobile" class="mt-2 inline-block rounded-lg border border-white/10 px-4 py-2">EN/HE</button>
-        <a id="ctaMessageTopMobile" href="#" class="mt-2 inline-block rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400" data-i18n="cta.message">Message me first</a>
-      </div>
-    </div>
-  </header>
+  <div id="sra-header"></div>
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
@@ -106,7 +49,6 @@
           <a id="ctaStartHero" href="#" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 font-semibold text-neutral-900 hover:bg-white/90" data-i18n="cta.start">Start my audit</a>
           <a id="ctaMessageHero" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10" data-i18n="cta.message">Message me first</a>
         </div>
-        <!-- Manual, Not AI -->
         <div class="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
           <div class="flex items-start gap-3">
             <div class="mt-1 h-3 w-3 rounded-full bg-emerald-400"></div>
@@ -122,7 +64,6 @@
   </section>
 
   <main id="main">
-
     <!-- Tabs: Summary / Details -->
     <section class="mx-auto max-w-6xl px-4 pt-6">
       <div class="inline-flex rounded-xl border border-white/10 bg-white/5 p-1" role="tablist" aria-label="View mode">
@@ -133,7 +74,6 @@
 
     <!-- SUMMARY PANEL -->
     <section id="tab-summary" data-tab-panel="summary" class="mx-auto max-w-6xl px-4 py-10">
-      <!-- Quick value props -->
       <div class="grid gap-6 md:grid-cols-3">
         <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
           <h3 class="font-bold" data-i18n="summary.clarity.h">Clarity</h3>
@@ -149,13 +89,10 @@
         </div>
       </div>
 
-      <!-- Scope Estimator -->
       <div class="mt-8 rounded-2xl border border-emerald-400/30 bg-emerald-500/5 p-6 md:p-8">
         <h2 class="text-2xl font-extrabold" data-i18n="est.title">Scope Estimator</h2>
         <p class="mt-2 text-white/70 text-sm" data-i18n="est.desc">A quick way to set expectations. This isn’t automated scanning—it’s a manual review. Estimates help match effort to your goals.</p>
-
         <form id="estimatorForm" class="mt-6 grid gap-6 md:grid-cols-2" onsubmit="return false;">
-          <!-- Timeframe -->
           <div>
             <label for="timeframe" class="block text-sm font-semibold" data-i18n="est.timeframe">Timeframe</label>
             <select id="timeframe" class="sra-input mt-2">
@@ -165,44 +102,32 @@
             </select>
             <p class="mt-2 text-xs text-white/50">Choose how far back you want me to look.</p>
           </div>
-
-          <!-- Posting Frequency -->
           <div>
             <label for="postsPerWeek" class="block text-sm font-semibold" data-i18n="est.ppw">Average posts per week</label>
             <input id="postsPerWeek" type="range" min="0" max="14" step="1" value="2" class="mt-2 w-full" />
             <div class="mt-1 text-xs text-white/50"><span id="ppwOut">2</span> posts/week (estimate)</div>
           </div>
-
-          <!-- Tagged Posts -->
           <div>
             <label for="taggedFreq" class="block text-sm font-semibold" data-i18n="est.tagged">Tagged posts frequency</label>
             <input id="taggedFreq" type="range" min="0" max="10" step="1" value="1" class="mt-2 w-full" />
             <div class="mt-1 text-xs text-white/50"><span id="taggedOut">1</span> per week (estimate)</div>
           </div>
-
-          <!-- Comments Intensity -->
           <div>
             <label for="commentsPerPost" class="block text-sm font-semibold" data-i18n="est.cpp">Typical comments per post</label>
             <input id="commentsPerPost" type="range" min="0" max="50" step="1" value="5" class="mt-2 w-full" />
             <div class="mt-1 text-xs text-white/50"><span id="cppOut">5</span> comments/post (estimate)</div>
           </div>
-
-          <!-- Groups/Events -->
           <div>
             <label for="groupsEvents" class="block text-sm font-semibold" data-i18n="est.ge">Active groups/events</label>
             <input id="groupsEvents" type="range" min="0" max="50" step="1" value="5" class="mt-2 w-full" />
             <div class="mt-1 text-xs text-white/50"><span id="geOut">5</span> active (estimate)</div>
           </div>
-
-          <!-- Albums/Photos -->
           <div>
             <label for="albums" class="block text-sm font-semibold" data-i18n="est.alb">Photo albums to scan</label>
             <input id="albums" type="range" min="0" max="50" step="1" value="3" class="mt-2 w-full" />
             <div class="mt-1 text-xs text-white/50"><span id="albOut">3</span> albums (estimate)</div>
           </div>
         </form>
-
-        <!-- Results -->
         <div class="mt-6 grid gap-6 md:grid-cols-3">
           <div class="rounded-xl border border-white/10 bg-white/5 p-4">
             <div class="text-sm text-white/50" data-i18n="est.items">Estimated items to review</div>
@@ -219,231 +144,38 @@
             <div class="mt-1 text-xs text-white/50">You can always upgrade or narrow focus.</div>
           </div>
         </div>
-
         <div class="mt-6 flex flex-col sm:flex-row gap-3">
           <a id="ctaMessageEstimator" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10" data-i18n="cta.message">Message me first</a>
           <a id="ctaStartEstimator" href="#" class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400" data-i18n="cta.start">Start my audit</a>
         </div>
-
         <p class="mt-3 text-xs text-white/50" data-i18n="est.note">These are non-binding estimates to aid planning. All audits are human-performed using only public information.</p>
       </div>
-
-      <!-- Link to Details -->
-      <div class="mt-8 text-sm">
-        <a href="#tab-details" class="underline decoration-emerald-400/60 hover:decoration-emerald-400" data-jump-tab="details">Prefer the full process? Open the Details view.</a>
-      </div>
     </section>
 
-    <!-- DETAILS PANEL (wrap your existing long-form sections here) -->
-    <section id="tab-details" data-tab-panel="details" class="hidden">
-      <!-- Move the original sections inside this Details panel: How it works, What you get, Packages, Ethics, Why, FAQ, CTA -->
-      <!-- BEGIN MOVED CONTENT -->
-      <!-- How it works -->
-      <section id="how" class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="how.title">How it works</h2>
-        <p class="mt-2 text-white/70">The DARK Threat Model: a simple, transparent process that surfaces what matters.</p>
+    <!-- DETAILS PANEL -->
+    <section id="tab-details" data-tab-panel="details" class="hidden mx-auto max-w-6xl px-4 py-10">
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <a href="/how.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="how"><h3 class="font-bold" data-i18n="nav.how">How it works</h3></a>
+        <a href="/what-you-get.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="deliverables"><h3 class="font-bold" data-i18n="nav.deliverables">What you get</h3></a>
+        <a href="/packages.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="packages"><h3 class="font-bold" data-i18n="nav.packages">Packages</h3></a>
+        <a href="/ethics.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="ethics"><h3 class="font-bold" data-i18n="nav.ethics">Ethics</h3></a>
+        <a href="/faq.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="faq"><h3 class="font-bold" data-i18n="nav.faq">FAQ</h3></a>
+        <a href="/about.html" class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10" data-nav="about"><h3 class="font-bold" data-i18n="nav.about">About</h3></a>
       </div>
-
-      <div class="grid gap-6 md:grid-cols-4">
-        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Consent & Transparency</h3>
-          <p class="mt-2 text-white/70">Before anything begins, you’ll get a clear explanation and sign a consent form. We proceed only when you confirm you understand the scope.</p>
-          <ul class="mt-4 list-disc pl-5 text-white/70 space-y-1">
-            <li>Open Source Intelligence only</li>
-            <li>No login, no password requests</li>
-            <li>No attempts to bypass privacy</li>
-            <li>Public-view exactly as a stranger</li>
-          </ul>
-        </article>
-
-        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Discover</h3>
-          <p class="mt-2 text-white/70">We review your public Facebook like a stranger would and identify high-risk data points (posts, photos, tags, About fields, likes, groups, events).</p>
-          <p class="mt-2 text-white/70">We don’t list everything—only what a bad actor would target first.</p>
-        </article>
-
-        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Analyze</h3>
-          <p class="mt-2 text-white/70">Each data point is assessed for realistic misuse (impersonation, harassment, social engineering, stalking). We include a fictional yet plausible threat simulation.</p>
-        </article>
-
-        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Reduce & Keep Safe</h3>
-          <p class="mt-2 text-white/70">You receive a Facebook Privacy Guide and a long-term Keep Safe guide. They show options—you decide what to keep public or change.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- What you get -->
-    <section id="deliverables" class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="deliverables.title">What you get</h2>
-        <p class="mt-2 text-white/70">Clear documentation, screenshot evidence, and practical guidance—without tech jargon.</p>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-lg font-bold">Risk Report</h3>
-          <ul class="mt-3 list-disc pl-5 text-white/70 space-y-1">
-            <li>Concise summary of exposed data points</li>
-            <li>Where they were found (with links/screens)</li>
-            <li>Why they matter & plausible misuse</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-lg font-bold">Evidence Folder</h3>
-          <ul class="mt-3 list-disc pl-5 text-white/70 space-y-1">
-            <li>Screen captures documenting each finding</li>
-            <li>Simple filenames + notes for reference</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-lg font-bold">Guides (PDF)</h3>
-          <ul class="mt-3 list-disc pl-5 text-white/70 space-y-1">
-            <li>Facebook Privacy Guide (step-by-step)</li>
-            <li>Keep Safe: long-term digital hygiene</li>
-            <li>Educational and non-prescriptive</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Packages -->
-    <section id="packages" class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="packages.title">Packages</h2>
-        <p class="mt-2 text-white/70">Choose how deep to go. You can also add focused pivots.</p>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Quick Check</h3>
-          <p class="mt-2 text-white/70">Recent 12 months, 8–12 key risks, screenshots, short summary.</p>
-          <a id="ctaStartQuick" href="#" class="mt-4 inline-block rounded-xl bg-white px-4 py-2 font-semibold text-neutral-900 hover:bg-white/90">Start Quick Check</a>
-        </div>
-        <div class="rounded-2xl border border-emerald-400/30 bg-emerald-500/5 p-6">
-          <h3 class="text-xl font-bold">Standard Audit</h3>
-          <p class="mt-2 text-white/70">3–5 years, DARK model, full write-ups + simulation, evidence + guides.</p>
-          <a id="ctaStartStandard" href="#" class="mt-4 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Start Standard</a>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Deep Dive</h3>
-          <p class="mt-2 text-white/70">Full history + pivots (IG, phone/email), expanded simulation, broader evidence.</p>
-          <a id="ctaStartDeep" href="#" class="mt-4 inline-block rounded-xl border border-white/20 px-4 py-2 font-semibold hover:bg-white/10">Discuss Deep Dive</a>
-        </div>
-      </div>
-
-      <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-6">
-        <h4 class="font-bold">Add-ons (focused pivots)</h4>
-        <p class="mt-2 text-white/70">Phone/email pivot, username reuse, employer/city, photo/location, group history. Open-source only.</p>
-      </div>
-    </section>
-
-    <!-- Ethics & Consent -->
-    <section id="ethics" class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="ethics.title">Ethics & Consent</h2>
-        <p class="mt-2 text-white/70">This service exists to protect, educate, and empower—not to exploit.</p>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <ul class="list-disc pl-5 text-white/70 space-y-1">
-            <li>I only audit Facebook accounts with signed consent from the owner.</li>
-            <li>No audits on behalf of spouses, partners, or third parties.</li>
-            <li>Open Source Intelligence only—publicly available info.</li>
-            <li>I do not login, friend, or connect with you.</li>
-            <li>I do not attempt to bypass privacy or protections.</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-white/70">You’ll know exactly what I’ll do before I begin. Every audit starts with transparency, consent, and accountability.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why this matters -->
-    <section id="why" class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="why.title">Why this matters</h2>
-        <p class="mt-2 text-white/70">Online exposure can enable impersonation, harassment, doxxing, and targeted scams. Clarity helps you choose your level of openness.</p>
-      </div>
-
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="font-bold">Clarity</h3>
-          <p class="mt-2 text-white/70">See what strangers can actually learn about you from public Facebook data.</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="font-bold">Control</h3>
-          <p class="mt-2 text-white/70">You decide what to keep public, restrict, or remove—no prescriptions.</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="font-bold">Proof</h3>
-          <p class="mt-2 text-white/70">Every finding is documented with screenshots so you can verify and act.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="faq.title">FAQ</h2>
-        <p class="mt-2 text-white/70">Straight answers to common questions.</p>
-      </div>
-
-      <div class="space-y-4">
-        <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
-          <summary class="flex cursor-pointer items-center justify-between text-left font-semibold">
-            Do you need my password or to friend me?
-            <span class="ml-4 text-white/50 group-open:rotate-180">⌄</span>
-          </summary>
-          <p class="mt-2 text-white/70">No. This audit is public-view only. No logins, no friend requests, and no bypassing privacy.</p>
-        </details>
-
-        <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
-          <summary class="flex cursor-pointer items-center justify-between text-left font-semibold">
-            Will you tell me exactly what to change?
-            <span class="ml-4 text-white/50 group-open:rotate-180">⌄</span>
-          </summary>
-          <p class="mt-2 text-white/70">I’ll show you what’s exposed and provide step-by-step guides. You choose what to change based on your goals.</p>
-        </details>
-
-        <details class="group rounded-2xl border border-white/10 bg-white/5 p-6">
-          <summary class="flex cursor-pointer items-center justify-between text-left font-semibold">
-            Can you audit someone else for me?
-            <span class="ml-4 text-white/50 group-open:rotate-180">⌄</span>
-          </summary>
-          <p class="mt-2 text-white/70">No. I only audit accounts with the owner’s signed consent.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="mx-auto max-w-6xl px-4 pb-20">
-      <div class="rounded-2xl border border-emerald-400/30 bg-emerald-500/5 p-8 md:p-10">
-        <h2 class="text-2xl md:text-3xl font-extrabold">Ready when you are.</h2>
-        <p class="mt-2 text-white/70">Start with a message, or go straight to the intake & consent form.</p>
-        <div class="mt-6 flex flex-col sm:flex-row gap-3">
-          <a id="ctaMessageBottom" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10" data-i18n="cta.message">Message me first</a>
-          <a id="ctaStartBottom" href="#" class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400" data-i18n="cta.start">Start my audit</a>
-        </div>
-      </div>
-    </section>
-    <!-- END MOVED CONTENT -->
     </section>
   </main>
 
-  <footer class="border-t border-white/10">
-    <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-white/50">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-        <p data-i18n="footer.copyright">© 2025 Social Risk Audit</p>
-        <p data-i18n="footer.byline">Created by Jeremiah • Made for GitHub Pages</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/assets/js/main.js" type="module"></script>
+  <div id="sra-footer"></div>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="/assets/js/i18n.js"></script>
+  <script type="module">
+    import { sraInit, initTabs, initEstimator } from '/assets/js/main.js';
+    await sraInit('home');
+    initTabs();
+    initEstimator();
+  </script>
 </body>
 </html>
