@@ -37,12 +37,26 @@ export async function sraInit(activePage) {
     if (saved === 'light') document.documentElement.classList.remove('dark');
   }
 
-  // language toggles
-  ['langToggle','langToggleMobile'].forEach(id => {
-    const btn = document.getElementById(id);
-    if (btn) btn.addEventListener('click', () => {
-      const next = i18n.current === 'en' ? 'he' : 'en';
-      i18n.setLang(next);
+  // language toggle switch
+  const langToggles = document.querySelectorAll('.language-toggle');
+  const updateLanguage = (lang) => {
+    document.querySelectorAll('[data-en][data-he]').forEach(el => {
+      el.textContent = lang === 'he' ? el.getAttribute('data-he') : el.getAttribute('data-en');
+    });
+  };
+  const applyLang = (lang) => {
+    const isHebrew = lang === 'he';
+    document.body.classList.toggle('hebrew-mode', isHebrew);
+    document.body.classList.toggle('english-mode', !isHebrew);
+    updateLanguage(lang);
+    localStorage.setItem('language', isHebrew ? 'hebrew' : 'english');
+    i18n.setLang(lang);
+  };
+  applyLang(i18n.current);
+  langToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const next = document.body.classList.contains('hebrew-mode') ? 'en' : 'he';
+      applyLang(next);
     });
   });
 
