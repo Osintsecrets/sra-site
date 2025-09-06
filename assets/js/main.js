@@ -1,5 +1,5 @@
-import { mountLayout } from '/assets/js/layout.js';
-import { SRAi18n } from '/assets/js/i18n.js';
+import { mountLayout } from './layout.js';
+import { SRAi18n } from './i18n.js';
 
 export async function sraInit(activePage) {
   await mountLayout(activePage);
@@ -8,7 +8,10 @@ export async function sraInit(activePage) {
   const i18n = new SRAi18n({
     defaultLang: localStorage.getItem('sra_lang') || 'en',
     supported: ['en','he'],
-    dictionaries: { en: '/assets/i18n/en.json', he: '/assets/i18n/he.json' }
+    dictionaries: {
+      en: 'assets/i18n/en.json',
+      he: 'assets/i18n/he.json'
+    }
   });
   await i18n.init();
   window.__sra_i18n = i18n;
