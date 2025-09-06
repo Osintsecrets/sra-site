@@ -51,6 +51,15 @@
     Consent-only, public-view audits. Educational. You stay in control.
   </div>
 
+  <!-- Manual Audit Ribbon -->
+  <div class="w-full border-b border-white/10 bg-white/5">
+    <div class="mx-auto max-w-6xl px-4 py-2 text-xs text-white/70 flex items-center gap-2">
+      <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+      <span class="font-semibold">Manual Audit Promise:</span>
+      No bots, no scraping, no API. Every audit is performed by a human, reviewing only what’s publicly visible.
+    </div>
+  </div>
+
   <!-- Nav -->
   <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
@@ -59,11 +68,11 @@
         <span class="text-lg font-extrabold tracking-tight">Social Risk Audit</span>
       </div>
       <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#how" class="hover:text-white/70">How it works</a>
-        <a href="#deliverables" class="hover:text-white/70">What you get</a>
-        <a href="#packages" class="hover:text-white/70">Packages</a>
-        <a href="#ethics" class="hover:text-white/70">Ethics</a>
-        <a href="#faq" class="hover:text-white/70">FAQ</a>
+        <a href="#how" data-jump-tab="details" class="hover:text-white/70">How it works</a>
+        <a href="#deliverables" data-jump-tab="details" class="hover:text-white/70">What you get</a>
+        <a href="#packages" data-jump-tab="details" class="hover:text-white/70">Packages</a>
+        <a href="#ethics" data-jump-tab="details" class="hover:text-white/70">Ethics</a>
+        <a href="#faq" data-jump-tab="details" class="hover:text-white/70">FAQ</a>
         <button id="themeToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10">Theme</button>
         <a id="ctaMessageTop" href="#" class="rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Message me first</a>
       </nav>
@@ -71,11 +80,11 @@
     </div>
     <div id="mobileMenu" class="hidden border-t border-white/10 md:hidden">
       <div class="mx-auto max-w-6xl px-4 py-3 space-y-2">
-        <a href="#how" class="block">How it works</a>
-        <a href="#deliverables" class="block">What you get</a>
-        <a href="#packages" class="block">Packages</a>
-        <a href="#ethics" class="block">Ethics</a>
-        <a href="#faq" class="block">FAQ</a>
+        <a href="#how" data-jump-tab="details" class="block">How it works</a>
+        <a href="#deliverables" data-jump-tab="details" class="block">What you get</a>
+        <a href="#packages" data-jump-tab="details" class="block">Packages</a>
+        <a href="#ethics" data-jump-tab="details" class="block">Ethics</a>
+        <a href="#faq" data-jump-tab="details" class="block">FAQ</a>
         <a id="ctaMessageTopMobile" href="#" class="mt-2 inline-block rounded-lg bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Message me first</a>
       </div>
     </div>
@@ -92,14 +101,140 @@
           <a id="ctaStartHero" href="#" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 font-semibold text-neutral-900 hover:bg-white/90">Start my audit</a>
           <a id="ctaMessageHero" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10">Message me first</a>
         </div>
+        <!-- Manual, Not AI -->
+        <div class="mt-6 rounded-xl border border-white/10 bg-white/5 p-4">
+          <div class="flex items-start gap-3">
+            <div class="mt-1 h-3 w-3 rounded-full bg-emerald-400"></div>
+            <div>
+              <p class="text-sm text-white/80"><span class="font-semibold">Manual, not AI:</span> I personally review posts, photos, comments, and visible profile fields. No logins, no friend requests, no bypassing privacy.</p>
+              <p class="mt-2 text-xs text-white/50">Effort depends on how much you’ve posted—3 posts in 12 months vs. 300 is a different scope. The estimator below helps set expectations.</p>
+            </div>
+          </div>
+        </div>
         <p class="mt-3 text-xs text-white/50">No logins. No friend requests. Public-view only. Evidence-based.</p>
       </div>
     </div>
   </section>
 
   <main id="main">
-    <!-- How it works -->
-    <section id="how" class="mx-auto max-w-6xl px-4 py-16">
+
+    <!-- Tabs: Summary / Details -->
+    <section class="mx-auto max-w-6xl px-4 pt-6">
+      <div class="inline-flex rounded-xl border border-white/10 bg-white/5 p-1" role="tablist" aria-label="View mode">
+        <button class="sra-tab sra-tab-active rounded-lg px-4 py-2 text-sm font-semibold" data-tab="summary" role="tab" aria-selected="true">Summary</button>
+        <button class="sra-tab rounded-lg px-4 py-2 text-sm font-semibold text-white/70 hover:text-white" data-tab="details" role="tab" aria-selected="false">Details</button>
+      </div>
+    </section>
+
+    <!-- SUMMARY PANEL -->
+    <section id="tab-summary" data-tab-panel="summary" class="mx-auto max-w-6xl px-4 py-10">
+      <!-- Quick value props -->
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold">Clarity</h3>
+          <p class="mt-2 text-white/70">See your Facebook exactly as a stranger would. No surprises.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold">Control</h3>
+          <p class="mt-2 text-white/70">You decide what to keep public or change. I don’t prescribe.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h3 class="font-bold">Proof</h3>
+          <p class="mt-2 text-white/70">Every finding is documented with screenshots so you can verify.</p>
+        </div>
+      </div>
+
+      <!-- Scope Estimator -->
+      <div class="mt-8 rounded-2xl border border-emerald-400/30 bg-emerald-500/5 p-6 md:p-8">
+        <h2 class="text-2xl font-extrabold">Scope Estimator</h2>
+        <p class="mt-2 text-white/70 text-sm">A quick way to set expectations. This isn’t automated scanning—it’s a manual review. Estimates help match effort to your goals.</p>
+
+        <form id="estimatorForm" class="mt-6 grid gap-6 md:grid-cols-2" onsubmit="return false;">
+          <!-- Timeframe -->
+          <div>
+            <label for="timeframe" class="block text-sm font-semibold">Timeframe</label>
+            <select id="timeframe" class="sra-input mt-2">
+              <option value="12">Last 12 months</option>
+              <option value="48">Last 3–4 years</option>
+              <option value="180">Full history (approx.)</option>
+            </select>
+            <p class="mt-2 text-xs text-white/50">Choose how far back you want me to look.</p>
+          </div>
+
+          <!-- Posting Frequency -->
+          <div>
+            <label for="postsPerWeek" class="block text-sm font-semibold">Average posts per week</label>
+            <input id="postsPerWeek" type="range" min="0" max="14" step="1" value="2" class="mt-2 w-full" />
+            <div class="mt-1 text-xs text-white/50"><span id="ppwOut">2</span> posts/week (estimate)</div>
+          </div>
+
+          <!-- Tagged Posts -->
+          <div>
+            <label for="taggedFreq" class="block text-sm font-semibold">Tagged posts frequency</label>
+            <input id="taggedFreq" type="range" min="0" max="10" step="1" value="1" class="mt-2 w-full" />
+            <div class="mt-1 text-xs text-white/50"><span id="taggedOut">1</span> per week (estimate)</div>
+          </div>
+
+          <!-- Comments Intensity -->
+          <div>
+            <label for="commentsPerPost" class="block text-sm font-semibold">Typical comments per post</label>
+            <input id="commentsPerPost" type="range" min="0" max="50" step="1" value="5" class="mt-2 w-full" />
+            <div class="mt-1 text-xs text-white/50"><span id="cppOut">5</span> comments/post (estimate)</div>
+          </div>
+
+          <!-- Groups/Events -->
+          <div>
+            <label for="groupsEvents" class="block text-sm font-semibold">Active groups/events</label>
+            <input id="groupsEvents" type="range" min="0" max="50" step="1" value="5" class="mt-2 w-full" />
+            <div class="mt-1 text-xs text-white/50"><span id="geOut">5</span> active (estimate)</div>
+          </div>
+
+          <!-- Albums/Photos -->
+          <div>
+            <label for="albums" class="block text-sm font-semibold">Photo albums to scan</label>
+            <input id="albums" type="range" min="0" max="50" step="1" value="3" class="mt-2 w-full" />
+            <div class="mt-1 text-xs text-white/50"><span id="albOut">3</span> albums (estimate)</div>
+          </div>
+        </form>
+
+        <!-- Results -->
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="text-sm text-white/50">Estimated items to review</div>
+            <div id="estItems" class="mt-1 text-2xl font-extrabold">—</div>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="text-sm text-white/50">Effort band (manual)</div>
+            <div id="estEffort" class="mt-1 text-2xl font-extrabold">—</div>
+            <div class="mt-1 text-xs text-white/50">Varies with complexity; final scope confirmed after a brief chat.</div>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div class="text-sm text-white/50">Suggested package</div>
+            <div id="estPackage" class="mt-1 text-2xl font-extrabold">—</div>
+            <div class="mt-1 text-xs text-white/50">You can always upgrade or narrow focus.</div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a id="ctaMessageEstimator" href="#" class="inline-flex items-center justify-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10">Message me first</a>
+          <a id="ctaStartEstimator" href="#" class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400">Start my audit</a>
+        </div>
+
+        <p class="mt-3 text-xs text-white/50">These are non-binding estimates to aid planning. All audits are human-performed using only public information.</p>
+      </div>
+
+      <!-- Link to Details -->
+      <div class="mt-8 text-sm">
+        <a href="#tab-details" class="underline decoration-emerald-400/60 hover:decoration-emerald-400" data-jump-tab="details">Prefer the full process? Open the Details view.</a>
+      </div>
+    </section>
+
+    <!-- DETAILS PANEL (wrap your existing long-form sections here) -->
+    <section id="tab-details" data-tab-panel="details" class="hidden">
+      <!-- Move the original sections inside this Details panel: How it works, What you get, Packages, Ethics, Why, FAQ, CTA -->
+      <!-- BEGIN MOVED CONTENT -->
+      <!-- How it works -->
+      <section id="how" class="mx-auto max-w-6xl px-4 py-16">
       <div class="mb-8">
         <h2 class="text-3xl font-extrabold">How it works</h2>
         <p class="mt-2 text-white/70">The DARK Threat Model: a simple, transparent process that surfaces what matters.</p>
@@ -290,6 +425,8 @@
           <a id="ctaStartBottom" href="#" class="inline-flex items-center justify-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400">Start my audit</a>
         </div>
       </div>
+    </section>
+    <!-- END MOVED CONTENT -->
     </section>
   </main>
 
