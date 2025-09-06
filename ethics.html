@@ -3,53 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ethics & Consent — Social Risk Audit</title>
-  <meta name="description" content="This service exists to protect, educate, and empower—not to exploit." />
-  <meta property="og:title" content="Ethics & Consent — Social Risk Audit" />
-  <meta property="og:description" content="This service exists to protect, educate, and empower—not to exploit." />
+  <title>Ethics — Social Risk Audit</title>
+  <meta name="description" content="What I will and won’t do. Consent, transparency, and privacy-first practice." />
+  <meta property="og:title" content="Ethics — Social Risk Audit" />
+  <meta property="og:description" content="Consent-only, public-view audits. Human-performed, privacy-first." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/images/no background black.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ethics & Consent — Social Risk Audit" />
-  <meta name="twitter:description" content="This service exists to protect, educate, and empower—not to exploit." />
-  <meta name="twitter:image" content="/assets/images/no background black.png" />
-  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
-  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="/assets/css/styles.css" rel="stylesheet" />
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
   <div id="sra-header"></div>
 
   <main id="main">
-    <section class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="ethics.title">Ethics & Consent</h2>
-        <p class="mt-2 text-white/70">This service exists to protect, educate, and empower—not to exploit.</p>
+    <section class="mx-auto max-w-4xl px-4 py-12 md:py-16">
+      <div class="flex items-center gap-3">
+        <img src="/assets/images/no background white.png" alt="Social Risk Audit logo" class="h-10 w-auto opacity-90" />
+        <h1 class="text-4xl md:text-5xl font-extrabold">Ethics & Consent</h1>
       </div>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <ul class="list-disc pl-5 text-white/70 space-y-1">
-            <li>I only audit Facebook accounts with signed consent from the owner.</li>
-            <li>No audits on behalf of spouses, partners, or third parties.</li>
-            <li>Open Source Intelligence only—publicly available info.</li>
-            <li>I do not login, friend, or connect with you.</li>
-            <li>I do not attempt to bypass privacy or protections.</li>
+      <p class="mt-3 text-white/70">This service exists to protect, educate, and empower—not to exploit.</p>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">What I will do</h2>
+          <ul class="mt-3 list-disc pl-5 space-y-2 text-white/80">
+            <li>Operate with a signed consent form from the account owner.</li>
+            <li>Use Open Source Intelligence only—publicly available information.</li>
+            <li>View your Facebook exactly as a stranger would.</li>
+            <li>Document meaningful findings with screenshots and clear notes.</li>
+            <li>Provide practical guides so you can decide what to change.</li>
           </ul>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <p class="text-white/70">You’ll know exactly what I’ll do before I begin. Every audit starts with transparency, consent, and accountability.</p>
-        </div>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">What I won’t do</h2>
+          <ul class="mt-3 list-disc pl-5 space-y-2 text-white/80">
+            <li>No passwords, no logins, no friend requests, no “friending.”</li>
+            <li>No attempts to bypass privacy settings or protections.</li>
+            <li>No audits for spouses, partners, employers, or third parties.</li>
+            <li>No scraping tools or automated scanning—this is human-performed.</li>
+            <li>No doxing, harassment, or weaponization of information—ever.</li>
+          </ul>
+        </article>
       </div>
+
+      <section class="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6">
+        <h2 class="text-xl font-bold">Transparency</h2>
+        <p class="mt-2 text-white/80">Before anything begins you’ll know what I’ll do, what I won’t do, and what you’ll receive. Scope depends on how much you’ve posted; effort is confirmed up front.</p>
+      </section>
     </section>
   </main>
 
   <div id="sra-footer"></div>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="/assets/js/i18n.js"></script>
+
   <script type="module">
     import { sraInit } from '/assets/js/main.js';
     await sraInit('ethics');

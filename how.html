@@ -4,63 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>How it works — Social Risk Audit</title>
-  <meta name="description" content="The DARK threat model and transparent process behind Social Risk Audit." />
-  <meta property="og:title" content="How it works — Social Risk Audit" />
-  <meta property="og:description" content="The DARK threat model and transparent process behind Social Risk Audit." />
-  <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/images/no background black.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="How it works — Social Risk Audit" />
-  <meta name="twitter:description" content="The DARK threat model and transparent process behind Social Risk Audit." />
-  <meta name="twitter:image" content="/assets/images/no background black.png" />
-  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
-  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="/assets/css/styles.css" rel="stylesheet" />
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
   <div id="sra-header"></div>
-
   <main id="main">
-    <section class="mx-auto max-w-6xl px-4 py-16">
-      <div class="mb-8">
-        <h2 class="text-3xl font-extrabold" data-i18n="how.title">How it works</h2>
-        <p class="mt-2 text-white/70">The DARK Threat Model: a simple, transparent process that surfaces what matters.</p>
-      </div>
-      <div class="grid gap-6 md:grid-cols-4">
-        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Consent & Transparency</h3>
-          <p class="mt-2 text-white/70">Before anything begins, you’ll get a clear explanation and sign a consent form. We proceed only when you confirm you understand the scope.</p>
-          <ul class="mt-4 list-disc pl-5 text-white/70 space-y-1">
-            <li>Open Source Intelligence only</li>
-            <li>No login, no password requests</li>
-            <li>No attempts to bypass privacy</li>
-            <li>Public-view exactly as a stranger</li>
-          </ul>
-        </article>
-        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Discover</h3>
-          <p class="mt-2 text-white/70">We review your public Facebook like a stranger would and identify high-risk data points (posts, photos, tags, About fields, likes, groups, events).</p>
-          <p class="mt-2 text-white/70">We don’t list everything—only what a bad actor would target first.</p>
-        </article>
-        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Analyze</h3>
-          <p class="mt-2 text-white/70">Each data point is assessed for realistic misuse (impersonation, harassment, social engineering, stalking). We include a fictional yet plausible threat simulation.</p>
-        </article>
-        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
-          <h3 class="text-xl font-bold">Reduce & Keep Safe</h3>
-          <p class="mt-2 text-white/70">You receive a Facebook Privacy Guide and a long-term Keep Safe guide. They show options—you decide what to keep public or change.</p>
-        </article>
-      </div>
+    <section class="mx-auto max-w-4xl px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-extrabold">How it works</h1>
+      <p class="mt-3 text-white/70">This page is a placeholder. The DARK process (Discover → Analyze → Reduce → Keep Safe) will be detailed here.</p>
     </section>
   </main>
-
   <div id="sra-footer"></div>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="/assets/js/i18n.js"></script>
   <script type="module">
     import { sraInit } from '/assets/js/main.js';
     await sraInit('how');
