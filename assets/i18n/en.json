@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "how": "How it works",
+    "deliverables": "What you get",
+    "packages": "Packages",
+    "ethics": "Ethics",
+    "faq": "FAQ",
+    "about": "About",
+    "theme": "Theme"
+  },
+  "announcement": "Consent-only, public-view audits. Educational. You stay in control.",
+  "ribbon": {
+    "title": "Manual Audit Promise:",
+    "copy": "No bots, no scraping, no API. Every audit is performed by a human, reviewing only what’s publicly visible."
+  },
+  "hero": {
+    "title": "See your Facebook the way a stranger does.",
+    "subtitle": "We run an independent, consent-only exposure audit of your public Facebook. You’ll see what’s visible, how it could be misused, and what options you have. You stay in control.",
+    "badges": "No logins. No friend requests. Public-view only. Evidence-based."
+  },
+  "manual": {
+    "card": {
+      "lead": "Manual, not AI: I personally review posts, photos, comments, and visible profile fields. No logins, no friend requests, no bypassing privacy.",
+      "note": "Effort depends on how much you’ve posted—3 posts in 12 months vs. 300 is a different scope. The estimator below helps set expectations."
+    }
+  },
+  "tabs": {
+    "summary": "Summary",
+    "details": "Details"
+  },
+  "summary": {
+    "clarity.h": "Clarity",
+    "clarity.p": "See your Facebook exactly as a stranger would. No surprises.",
+    "control.h": "Control",
+    "control.p": "You decide what to keep public or change. I don’t prescribe.",
+    "proof.h": "Proof",
+    "proof.p": "Every finding is documented with screenshots so you can verify."
+  },
+  "est": {
+    "title": "Scope Estimator",
+    "desc": "A quick way to set expectations. This isn’t automated scanning—it’s a manual review. Estimates help match effort to your goals.",
+    "timeframe": "Timeframe",
+    "tf.12": "Last 12 months",
+    "tf.48": "Last 3–4 years",
+    "tf.180": "Full history (approx.)",
+    "ppw": "Average posts per week",
+    "tagged": "Tagged posts frequency",
+    "cpp": "Typical comments per post",
+    "ge": "Active groups/events",
+    "alb": "Photo albums to scan",
+    "items": "Estimated items to review",
+    "effort": "Effort band (manual)",
+    "package": "Suggested package",
+    "note": "These are non-binding estimates to aid planning. All audits are human-performed using only public information."
+  },
+  "cta": {
+    "message": "Message me first",
+    "start": "Start my audit"
+  },
+  "how": {
+    "title": "How it works"
+  },
+  "deliverables": {
+    "title": "What you get"
+  },
+  "packages": {
+    "title": "Packages"
+  },
+  "ethics": {
+    "title": "Ethics & Consent"
+  },
+  "why": {
+    "title": "Why this matters"
+  },
+  "faq": {
+    "title": "FAQ"
+  },
+  "about": {
+    "title": "About",
+    "tagline": "Who I am, why I care about privacy, and how I think about OSINT."
+  },
+  "footer": {
+    "copyright": "© 2025 Social Risk Audit",
+    "byline": "Created by Jeremiah • Made for GitHub Pages"
+  }
+}
