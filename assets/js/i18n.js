@@ -3,7 +3,7 @@ export class SRAi18n {
     this.defaultLang = defaultLang;
     this.supported = supported;
     this.dictionaries = dictionaries;
-    this.current = localStorage.getItem('sra_lang') || defaultLang;
+    this.current = localStorage.getItem('language') || defaultLang;
     if (!this.supported.includes(this.current)) this.current = defaultLang;
     this.dict = {};
   }
@@ -19,12 +19,17 @@ export class SRAi18n {
     this.dict = await res.json();
   }
 
-  setLang(lang) {
+  setLanguage(lang) {
     if (!this.supported.includes(lang)) return;
     if (lang === this.current) return;
     this.current = lang;
-    localStorage.setItem('sra_lang', lang);
+    localStorage.setItem('language', lang);
     this.load(lang).then(() => this.apply());
+  }
+
+  // Backward compatibility
+  setLang(lang) {
+    this.setLanguage(lang);
   }
 
   apply() {
