@@ -4,74 +4,36 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Social Risk Audit</title>
-  <meta name="description" content="Who I am, why I do this, and how I think about OSINT and privacy." />
+  <meta name="description" content="Who I am, why I care about privacy, and how I think about OSINT." />
   <meta property="og:title" content="About — Social Risk Audit" />
-  <meta property="og:description" content="Who I am, why I do this, and how I think about OSINT and privacy." />
+  <meta property="og:description" content="Who I am, why I care about privacy, and how I think about OSINT." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/images/og-cover.jpg" />
+  <meta property="og:image" content="/assets/images/no background black.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About — Social Risk Audit" />
+  <meta name="twitter:description" content="Who I am, why I care about privacy, and how I think about OSINT." />
+  <meta name="twitter:image" content="/assets/images/no background black.png" />
   <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
-  </script>
   <link href="/assets/css/styles.css" rel="stylesheet" />
-  <script defer src="/assets/js/i18n.js"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
-  <!-- Announcement -->
-  <div class="w-full bg-emerald-500/10 border-b border-emerald-400/20 text-emerald-200 text-center text-sm py-2" data-i18n="announcement">
-    Consent-only, public-view audits. Educational. You stay in control.
-  </div>
-
-  <!-- Manual Audit Ribbon -->
+  <div class="w-full bg-emerald-500/10 border-b border-emerald-400/20 text-emerald-200 text-center text-sm py-2" data-i18n="announcement">Consent-only, public-view audits. Educational. You stay in control.</div>
   <div class="w-full border-b border-white/10 bg-white/5">
     <div class="mx-auto max-w-6xl px-4 py-2 text-xs text-white/70 flex items-center gap-2">
       <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
       <span class="font-semibold" data-i18n="ribbon.title">Manual Audit Promise:</span>
-      <span data-i18n="ribbon.copy">No bots, no scraping, no API. Every audit is performed by a human...</span>
+      <span data-i18n="ribbon.copy">No bots, no scraping, no API. Every audit is performed by a human, reviewing only what’s publicly visible.</span>
     </div>
   </div>
-
-  <!-- Nav -->
-  <header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-      <div class="flex items-center gap-3">
-        <div class="h-8 w-8 rounded-lg bg-white/10"></div>
-        <a href="/" class="text-lg font-extrabold tracking-tight">Social Risk Audit</a>
-      </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a data-i18n="nav.how" href="/#how" class="hover:text-white/70">How it works</a>
-        <a data-i18n="nav.deliverables" href="/#deliverables" class="hover:text-white/70">What you get</a>
-        <a data-i18n="nav.packages" href="/#packages" class="hover:text-white/70">Packages</a>
-        <a data-i18n="nav.ethics" href="/#ethics" class="hover:text-white/70">Ethics</a>
-        <a data-i18n="nav.faq" href="/#faq" class="hover:text-white/70">FAQ</a>
-        <a data-i18n="nav.about" href="/about.html" class="hover:text-white/70">About</a>
-        <button id="langToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10">EN/HE</button>
-        <button id="themeToggle" class="rounded-lg border border-white/10 px-3 py-1 hover:bg-white/10"><span data-i18n="nav.theme">Theme</span></button>
-      </nav>
-      <button id="menuBtn" class="md:hidden rounded-lg border border-white/10 px-3 py-1">Menu</button>
-    </div>
-    <div id="mobileMenu" class="hidden border-t border-white/10 md:hidden">
-      <div class="mx-auto max-w-6xl px-4 py-3 space-y-2">
-        <a data-i18n="nav.how" href="/#how" class="block">How it works</a>
-        <a data-i18n="nav.deliverables" href="/#deliverables" class="block">What you get</a>
-        <a data-i18n="nav.packages" href="/#packages" class="block">Packages</a>
-        <a data-i18n="nav.ethics" href="/#ethics" class="block">Ethics</a>
-        <a data-i18n="nav.faq" href="/#faq" class="block">FAQ</a>
-        <a data-i18n="nav.about" href="/about.html" class="block">About</a>
-        <button id="langToggleMobile" class="mt-2 inline-block rounded-lg border border-white/10 px-4 py-2">EN/HE</button>
-      </div>
-    </div>
-  </header>
+  <div id="sra-header"></div>
 
   <main id="main">
     <section class="mx-auto max-w-3xl px-4 py-12 md:py-16">
       <h1 class="text-4xl md:text-5xl font-extrabold" data-i18n="about.title">About</h1>
       <p class="mt-3 text-white/70" data-i18n="about.tagline">Who I am, why I care about privacy, and how I think about OSINT.</p>
 
-      <!-- Your story, lightly edited into sections -->
       <article class="mt-10 space-y-10 leading-relaxed text-white/90">
         <section>
           <h2 class="text-2xl font-bold">The Beginning: Discovering OSINT</h2>
@@ -125,53 +87,15 @@
     </section>
   </main>
 
-  <footer class="border-t border-white/10">
-    <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-white/50">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-        <p data-i18n="footer.copyright">© 2025 Social Risk Audit</p>
-        <p data-i18n="footer.byline">Created by Jeremiah • Made for GitHub Pages</p>
-      </div>
-    </div>
-  </footer>
-
+  <div id="sra-footer"></div>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="/assets/js/i18n.js"></script>
   <script type="module">
-    import { SRAi18n } from '/assets/js/i18n.js';
-    const i18n = new SRAi18n({
-      defaultLang: localStorage.getItem('sra_lang') || 'en',
-      supported: ['en','he'],
-      dictionaries: { en: '/assets/i18n/en.json', he: '/assets/i18n/he.json' }
-    });
-    await i18n.init();
-
-    // mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (menuBtn && mobileMenu) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-    // theme toggle
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const html = document.documentElement;
-        html.classList.toggle('dark');
-        const isDark = html.classList.contains('dark');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      });
-      const saved = localStorage.getItem('theme');
-      if (saved === 'light') document.documentElement.classList.remove('dark');
-    }
-
-    // Language toggles
-    ['langToggle','langToggleMobile'].forEach(id => {
-      const btn = document.getElementById(id);
-      if (btn) btn.addEventListener('click', () => {
-        const next = i18n.current === 'en' ? 'he' : 'en';
-        i18n.setLang(next);
-      });
-    });
-
-    // Wire CTA
-    document.getElementById('ctaMessageAbout')?.setAttribute('href', 'https://wa.me/XXXXXXXXXXX');
+    import { sraInit } from '/assets/js/main.js';
+    await sraInit('about');
   </script>
 </body>
 </html>

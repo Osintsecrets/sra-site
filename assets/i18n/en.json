@@ -1,13 +1,15 @@
 {
-  "nav": {
-    "how": "How it works",
-    "deliverables": "What you get",
-    "packages": "Packages",
-    "ethics": "Ethics",
-    "faq": "FAQ",
-    "about": "About",
-    "theme": "Theme"
-  },
+    "nav": {
+      "home": "Home",
+      "how": "How it works",
+      "deliverables": "What you get",
+      "packages": "Packages",
+      "ethics": "Ethics",
+      "faq": "FAQ",
+      "about": "About",
+      "contact": "Contact",
+      "theme": "Theme"
+    },
   "announcement": "Consent-only, public-view audits. Educational. You stay in control.",
   "ribbon": {
     "title": "Manual Audit Promise:",

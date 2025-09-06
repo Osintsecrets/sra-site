@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ethics & Consent — Social Risk Audit</title>
+  <meta name="description" content="This service exists to protect, educate, and empower—not to exploit." />
+  <meta property="og:title" content="Ethics & Consent — Social Risk Audit" />
+  <meta property="og:description" content="This service exists to protect, educate, and empower—not to exploit." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/images/no background black.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ethics & Consent — Social Risk Audit" />
+  <meta name="twitter:description" content="This service exists to protect, educate, and empower—not to exploit." />
+  <meta name="twitter:image" content="/assets/images/no background black.png" />
+  <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <link href="/assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+  <div class="w-full bg-emerald-500/10 border-b border-emerald-400/20 text-emerald-200 text-center text-sm py-2" data-i18n="announcement">Consent-only, public-view audits. Educational. You stay in control.</div>
+  <div class="w-full border-b border-white/10 bg-white/5">
+    <div class="mx-auto max-w-6xl px-4 py-2 text-xs text-white/70 flex items-center gap-2">
+      <span class="inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+      <span class="font-semibold" data-i18n="ribbon.title">Manual Audit Promise:</span>
+      <span data-i18n="ribbon.copy">No bots, no scraping, no API. Every audit is performed by a human, reviewing only what’s publicly visible.</span>
+    </div>
+  </div>
+  <div id="sra-header"></div>
+
+  <main id="main">
+    <section class="mx-auto max-w-6xl px-4 py-16">
+      <div class="mb-8">
+        <h2 class="text-3xl font-extrabold" data-i18n="ethics.title">Ethics & Consent</h2>
+        <p class="mt-2 text-white/70">This service exists to protect, educate, and empower—not to exploit.</p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <ul class="list-disc pl-5 text-white/70 space-y-1">
+            <li>I only audit Facebook accounts with signed consent from the owner.</li>
+            <li>No audits on behalf of spouses, partners, or third parties.</li>
+            <li>Open Source Intelligence only—publicly available info.</li>
+            <li>I do not login, friend, or connect with you.</li>
+            <li>I do not attempt to bypass privacy or protections.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <p class="text-white/70">You’ll know exactly what I’ll do before I begin. Every audit starts with transparency, consent, and accountability.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="sra-footer"></div>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','ui-sans-serif','system-ui']}}}};
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="/assets/js/i18n.js"></script>
+  <script type="module">
+    import { sraInit } from '/assets/js/main.js';
+    await sraInit('ethics');
+  </script>
+</body>
+</html>
