@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="he" class="dark scroll-smooth" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>המעריך — Social Risk Audit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="../assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+  <div id="sra-header"></div>
+  <div id="sra-sidebar"></div>
+
+  <main id="main">
+    <section class="mx-auto max-w-4xl px-4 py-12">
+      <h1 class="text-4xl font-extrabold">המעריך</h1>
+      <p class="mt-2 text-white/70">אומדן גס כדי לעזור לבחור חבילה. (תמיד אפשר לשלוח לי הודעה קודם.)</p>
+
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 grid gap-4">
+          <label>טווח זמן (חודשים)
+            <input id="timeframe" type="number" min="1" max="120" value="12" class="w-full rounded-xl bg-white/5 px-4 py-2 border border-white/10">
+          </label>
+          <label>פוסטים ממוצעים לשבוע
+            <input id="postsPerWeek" type="number" min="0" max="50" value="2" class="w-full rounded-xl bg-white/5 px-4 py-2 border border-white/10">
+          </label>
+          <label>פוסטים מתויגים לשבוע
+            <input id="taggedFreq" type="number" min="0" max="50" value="0" class="w-full rounded-xl bg-white/5 px-4 py-2 border border-white/10">
+          </label>
+          <label>אחוז תגובות לפוסט לדגימה
+            <input id="commentsPerPost" type="number" min="0" max="100" value="10" class="w-full rounded-xl bg-white/5 px-4 py-2 border border-white/10">
+          </label>
+          <label>קבוצות/אירועים לסריקה (לחודש)
+            <input id="groupsEvents" type="number" min="0" max="30" value="2" class="w-full rounded-xl bg-white/5 px-4 py-2 border border-white/10">
+          </label>
+          <label>אלבומים לבדיקה
+            <input id="albums" type="number" min="0" max="50" value="1" class="w-full rounded-xl bg-white/5 px-4 py-2 border border-white/10">
+          </label>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">היקף מוערך</h2>
+          <dl class="mt-4 space-y-2 text-white/80">
+            <div class="flex justify-between"><dt>פוסטים/שבוע</dt><dd id="ppwOut">2</dd></div>
+            <div class="flex justify-between"><dt>מתויגים/שבוע</dt><dd id="taggedOut">0</dd></div>
+            <div class="flex justify-between"><dt>תגובות מדגמיות</dt><dd id="cppOut">10%</dd></div>
+            <div class="flex justify-between"><dt>קבוצות/אירועים</dt><dd id="geOut">2</dd></div>
+            <div class="flex justify-between"><dt>אלבומים</dt><dd id="albOut">1</dd></div>
+            <div class="flex justify-between font-semibold"><dt>סה"כ פריטים</dt><dd id="estItems">—</dd></div>
+            <div class="flex justify-between font-semibold"><dt>מאמץ</dt><dd id="estEffort">—</dd></div>
+            <div class="flex justify-between font-semibold"><dt>חבילה מוצעת</dt><dd id="estPackage">—</dd></div>
+          </dl>
+
+          <div class="mt-6 flex gap-3">
+            <a id="ctaMessageBottom" href="#" class="rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10">שלחו לי הודעה קודם</a>
+            <a id="ctaStartBottom" href="#" class="rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400">התחילו את הבדיקה שלי</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="sra-footer"></div>
+
+  <script type="module">
+    import { sraInit, initEstimator } from '../assets/js/main.js';
+    (async () => { await sraInit('estimator'); initEstimator(); })();
+  </script>
+</body>
+</html>

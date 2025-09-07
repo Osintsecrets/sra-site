@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="he" class="dark scroll-smooth" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>טופס פתיחה — Social Risk Audit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="../assets/css/styles.css" rel="stylesheet" />
+</head>
+<body class="bg-neutral-950 text-neutral-100 font-sans">
+  <div id="sra-header"></div>
+  <div id="sra-sidebar"></div>
+
+  <main id="main">
+    <section class="mx-auto max-w-3xl px-4 py-12">
+      <h1 class="text-4xl font-extrabold">התחלת הבדיקה</h1>
+      <p class="mt-2 text-white/70">אין צורך בסיסמאות — רק כדי להבין את המטרות שלך.</p>
+
+      <form data-intake class="mt-8 grid gap-4">
+        <input name="name" placeholder="שם מלא" class="rounded-xl bg-white/5 px-4 py-3 border border-white/10" required />
+        <input type="email" name="email" placeholder="אימייל" class="rounded-xl bg-white/5 px-4 py-3 border border-white/10" required />
+        <input type="url" name="facebook" placeholder="קישור לפרופיל פייסבוק" class="rounded-xl bg-white/5 px-4 py-3 border border-white/10" required />
+        <select name="prefLang" class="rounded-xl bg-white/5 px-4 py-3 border border-white/10">
+          <option value="HE">שפת עבודה מועדפת: עברית</option>
+          <option value="EN">שפת עבודה מועדפת: אנגלית</option>
+        </select>
+        <textarea name="goals" placeholder="מטרות או דאגות (לא חובה)" rows="5" class="rounded-xl bg-white/5 px-4 py-3 border border-white/10"></textarea>
+
+        <div class="flex gap-3 pt-2">
+          <button type="button" id="sendWA" class="rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-neutral-900 hover:bg-emerald-400">שליחה בווטסאפ</button>
+          <a id="ctaMessageBottom" href="#" class="rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/10">יש לי שאלה</a>
+        </div>
+        <p class="text-xs text-white/50">בשליחה אתה מאשר/ת בעלות על החשבון והסכמה לבדיקה במצב ציבורי בלבד.</p>
+      </form>
+    </section>
+  </main>
+
+  <div id="sra-footer"></div>
+
+  <script type="module">
+    import { sraInit, openWhatsAppWithFormPayload } from '../assets/js/main.js';
+    (async () => {
+      await sraInit('intake');
+      document.getElementById('sendWA')?.addEventListener('click', () => openWhatsAppWithFormPayload('he'));
+    })();
+  </script>
+</body>
+</html>
