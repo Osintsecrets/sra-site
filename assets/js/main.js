@@ -1,34 +1,58 @@
-import { mountLayout } from './layout.js';
 import { SRAi18n } from './i18n.js';
+import { mountLayout } from './layout.js';
 
-function applyLanguage(i18n, lang) {
+function applyLanguage(i18n, code){
   const html = document.documentElement;
   const body = document.body;
-  const code = (lang === 'he' ? 'he' : 'en');
-  localStorage.setItem('language', code);
-
-  body.classList.toggle('hebrew-mode', code === 'he');
-  body.classList.toggle('english-mode', code !== 'he');
-  html.setAttribute('dir', code === 'he' ? 'rtl' : 'ltr');
-  html.setAttribute('lang', code);
-
-  i18n.setLanguage(code);
+  const lang = (code === 'he') ? 'he' : 'en';
+  localStorage.setItem('language', lang);
+  body.classList.toggle('hebrew-mode', lang==='he');
+  body.classList.toggle('english-mode', lang!=='he');
+  html.setAttribute('lang', lang);
+  html.setAttribute('dir', lang==='he' ? 'rtl' : 'ltr');
+  i18n.setLanguage(lang);
 }
 
-function wireLanguageToggles(i18n) {
-  document.addEventListener('click', (e) => {
-    const el = e.target.closest('#language-toggle, #language-toggle-mobile');
-    if (!el) return;
+function wireLanguageToggles(i18n){
+  document.addEventListener('click', (e)=>{
+    const el = e.target.closest('#language-toggle');
+    if(!el) return;
     const current = localStorage.getItem('language') || 'en';
-    const next = current === 'he' ? 'en' : 'he';
-    applyLanguage(i18n, next);
+    applyLanguage(i18n, current==='he' ? 'en' : 'he');
   });
 }
 
-export async function sraInit(activePage) {
-  await mountLayout(activePage);
+async function mountSidebar(pageKey, i18n){
+  if(pageKey === 'home') return; // no sidebar on home
+  const host = document.querySelector('#sra-sidebar');
+  if(!host) return;
 
-  // i18n
+  const res = await fetch('partials/sidebar.html');
+  host.innerHTML = await res.text();
+
+  // open/close (mobile)
+  const aside = host.querySelector('.sra-sidebar');
+  const openBtn = host.querySelector('#sra-sidebar-open');
+  const closeBtn = host.querySelector('#sra-sidebar-close');
+  openBtn?.addEventListener('click', ()=> aside.classList.add('open'));
+  closeBtn?.addEventListener('click', ()=> aside.classList.remove('open'));
+  aside?.addEventListener('click', (e)=>{ if(e.target === aside) aside.classList.remove('open'); });
+
+  // active item
+  const map = { home:'index.html', how:'how.html', deliverables:'what-you-get.html', packages:'packages.html', ethics:'ethics.html', about:'about.html', contact:'contact.html' };
+  const path = map[pageKey];
+  host.querySelectorAll('.sra-nav-item').forEach(a=>{
+    if(a.getAttribute('href') === path) a.classList.add('active');
+  });
+
+  // translate labels now that DOM is in place
+  i18n.translateDocument();
+  document.body.classList.add('has-sidebar');
+}
+
+export async function sraInit(pageKey){
+  await mountLayout(pageKey);
+
   const i18n = new SRAi18n({
     defaultLang: 'en',
     supported: ['en','he'],
@@ -43,18 +67,7 @@ export async function sraInit(activePage) {
   const saved = localStorage.getItem('language') || 'en';
   applyLanguage(i18n, saved);
   wireLanguageToggles(i18n);
-
-  // theme toggle
-  const themeToggle = document.getElementById('themeToggle');
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const html = document.documentElement;
-      html.classList.toggle('dark');
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-    });
-    const saved = localStorage.getItem('theme');
-    if (saved === 'light') document.documentElement.classList.remove('dark');
-  }
+  await mountSidebar(pageKey, i18n);
 
   // CTAs
   const LINKS = {
@@ -62,8 +75,6 @@ export async function sraInit(activePage) {
     message: 'https://wa.me/XXXXXXXXXXX'
   };
   const setHref = (id, url) => { const el = document.getElementById(id); if (el) el.setAttribute('href', url); };
-  setHref('ctaMessageTop', LINKS.message);
-  setHref('ctaMessageTopMobile', LINKS.message);
   setHref('ctaMessageHero', LINKS.message);
   setHref('ctaMessageBottom', LINKS.message);
   setHref('ctaStartHero', LINKS.intake);
@@ -72,66 +83,6 @@ export async function sraInit(activePage) {
   setHref('ctaStartDeep', LINKS.message);
   setHref('ctaStartBottom', LINKS.intake);
   setHref('ctaMessageAbout', LINKS.message);
-
-  // ----- Mega Menu (desktop) -----
-  const megaBtn = document.getElementById('megaBtn');
-  const megaPanel = document.getElementById('megaPanel');
-  let megaTimer;
-
-  function openMega() {
-    if (!megaPanel) return;
-    megaPanel.classList.remove('hidden');
-    megaPanel.setAttribute('data-open','true');
-    megaBtn?.setAttribute('aria-expanded','true');
-  }
-  function closeMega() {
-    if (!megaPanel) return;
-    megaPanel.classList.add('hidden');
-    megaPanel.removeAttribute('data-open');
-    megaBtn?.setAttribute('aria-expanded','false');
-  }
-  function toggleMega() {
-    if (!megaPanel) return;
-    if (megaPanel.classList.contains('hidden')) openMega(); else closeMega();
-  }
-
-  // Click to open/close
-  megaBtn?.addEventListener('click', (e)=>{ e.preventDefault(); toggleMega(); });
-
-  // Hover open/close for pointer devices
-  const headerEl = document.querySelector('header');
-  if (headerEl && window.matchMedia('(pointer:fine)').matches) {
-    headerEl.addEventListener('mouseenter', ()=>{ clearTimeout(megaTimer); openMega(); });
-    headerEl.addEventListener('mouseleave', ()=>{ megaTimer = setTimeout(closeMega, 120); });
-  }
-
-  // Close on outside click / ESC
-  document.addEventListener('click', (e)=>{
-    if (!megaPanel || !megaBtn) return;
-    const within = megaPanel.contains(e.target) || megaBtn.contains(e.target);
-    if (!within) closeMega();
-  });
-  document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeMega(); });
-
-  // Wire "Message" link inside mega
-  setHref('ctaMessageTopMega', LINKS.message);
-
-  // ----- Mobile hamburger -----
-  const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const mobileMenuEl = document.getElementById('mobileMenu');
-  hamburgerBtn?.addEventListener('click', ()=>{
-    mobileMenuEl?.classList.toggle('hidden');
-  });
-
-  // Mobile theme toggle mirrors desktop
-  const themeToggleMobile = document.getElementById('themeToggleMobile');
-  if (themeToggleMobile) {
-    themeToggleMobile.addEventListener('click', ()=>{
-      const html = document.documentElement;
-      html.classList.toggle('dark');
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-    });
-  }
 }
 
 export function initTabs() {
