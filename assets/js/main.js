@@ -12,10 +12,18 @@ function setLanguageLinks(pageKey) {
     faq: 'faq.html'
   };
   const page = map[pageKey] || 'index.html';
+  const lang = document.documentElement.lang;
   const en = document.getElementById('lang-en');
   const he = document.getElementById('lang-he');
-  if (en) en.setAttribute('href', `../en/${page}`);
-  if (he) he.setAttribute('href', `../he/${page}`);
+  if (lang === 'en') {
+    en?.classList.add('pointer-events-none', 'text-white/50');
+    en?.setAttribute('aria-current', 'page');
+    he?.setAttribute('href', `../he/${page}`);
+  } else if (lang === 'he') {
+    he?.classList.add('pointer-events-none', 'text-white/50');
+    he?.setAttribute('aria-current', 'page');
+    en?.setAttribute('href', `../en/${page}`);
+  }
 }
 
 async function mountSidebar(pageKey) {
