@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Social Risk Audit — See your Facebook the way a stranger does</title>
-  <meta name="description" content="An independent Facebook exposure audit. We show what your public Facebook reveals so you can decide what to change. Consent-only, public-view, evidence-based." />
+  <title>Social Risk Audit — ראו את פייסבוק שלכם כפי שזר רואה אותו</title>
+  <meta name="description" content="בדיקה עצמאית של חשיפה בפייסבוק. אנו מראים מה החשבון הציבורי שלכם חושף כדי שתדעו מה לשנות. על בסיס הסכמה בלבד, מידע ציבורי ותיעוד ראייתי." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Social Risk Audit" />
-  <meta property="og:description" content="See your Facebook the way a stranger does. Consent-only, public-view audits. You stay in control." />
+  <meta property="og:description" content="ראו את פייסבוק שלכם כפי שזר רואה אותו. בדיקות על בסיס הסכמה ומידע ציבורי בלבד. אתם נשארים בשליטה." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="../assets/images/no background black.png" />
   <meta property="og:url" content="https://<your-username>.github.io/<your-repo>/" />
@@ -16,7 +16,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Social Risk Audit" />
-  <meta name="twitter:description" content="See your Facebook the way a stranger does." />
+  <meta name="twitter:description" content="ראו את פייסבוק שלכם כפי שזר רואה אותו." />
   <meta name="twitter:image" content="../assets/images/no background black.png" />
 
   <link rel="icon" href="../assets/favicon/favicon.ico" sizes="any" />
@@ -29,37 +29,59 @@
   <div id="sra-header"></div>
 
   <main id="main">
-    <section class="mx-auto max-w-6xl px-4 py-16 md:py-24">
-      <div class="md:flex md:items-start md:justify-between">
-        <div class="max-w-2xl">
-          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">תוכן בעברית בקרוב.</h1>
-          <p class="mt-4 text-lg text-white/70">הטקסט בעברית יתווסף בקרוב.</p>
+    <section class="mx-auto max-w-6xl px-4 py-8 md:py-16">
+      <div class="grid gap-8 md:grid-cols-2 md:items-center">
+        <!-- Headline + tagline -->
+        <div class="order-1">
+          <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight">
+            ראו את פייסבוק שלכם כפי שזר רואה אותו.
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-white/70 max-w-xl">
+            הביטו בפייסבוק שלכם דרך עיני זרים — לפני שהם עושים זאת.
+          </p>
+        </div>
 
-          <!-- Quick nav tiles -->
-          <div class="mt-14 grid gap-6 md:grid-cols-3">
-            <a href="how.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
-              <h3 class="text-xl font-bold">How it works</h3>
-              <p class="mt-2 text-white/70">הטקסט בעברית יתווסף בקרוב.</p>
+        <!-- Logo: sits to the right on desktop, centered below headline on mobile -->
+        <div class="order-2 md:order-2 flex md:block justify-center mt-4 md:mt-0">
+          <img src="../assets/images/no background white.png"
+               alt="לוגו Social Risk Audit"
+               class="h-24 sm:h-28 md:h-64 w-auto opacity-90" />
+        </div>
+
+        <!-- Tiles -->
+        <div class="order-3 md:col-span-2">
+          <div class="mt-8 md:mt-12 grid gap-3 sm:gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3">
+            <!-- How it works -->
+            <a href="how.html"
+               class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-5 sm:py-6 hover:bg-white/10 text-center transition">
+              <h3 class="text-base sm:text-lg font-bold">איך זה עובד</h3>
             </a>
-            <a href="what-you-get.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
-              <h3 class="text-xl font-bold">What you get</h3>
-              <p class="mt-2 text-white/70">הטקסט בעברית יתווסף בקרוב.</p>
+
+            <!-- What you get -->
+            <a href="what-you-get.html"
+               class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-5 sm:py-6 hover:bg-white/10 text-center transition">
+              <h3 class="text-base sm:text-lg font-bold">מה מקבלים</h3>
             </a>
-            <a href="packages.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
-              <h3 class="text-xl font-bold">Packages</h3>
-              <p class="mt-2 text-white/70">הטקסט בעברית יתווסף בקרוב.</p>
+
+            <!-- Packages -->
+            <a href="packages.html"
+               class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-5 sm:py-6 hover:bg-white/10 text-center transition">
+              <h3 class="text-base sm:text-lg font-bold">חבילות</h3>
             </a>
-            <a href="ethics.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
-              <h3 class="text-xl font-bold">Ethics</h3>
-              <p class="mt-2 text-white/70">הטקסט בעברית יתווסף בקרוב.</p>
+
+            <!-- Ethics -->
+            <a href="ethics.html"
+               class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-5 sm:py-6 hover:bg-white/10 text-center transition">
+              <h3 class="text-base sm:text-lg font-bold">אתיקה</h3>
             </a>
-            <a href="about.html" class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
-              <h3 class="text-xl font-bold">About</h3>
-              <p class="mt-2 text-white/70">הטקסט בעברית יתווסף בקרוב.</p>
+
+            <!-- About -->
+            <a href="about.html"
+               class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 sm:px-5 sm:py-6 hover:bg-white/10 text-center transition">
+              <h3 class="text-base sm:text-lg font-bold">אודות</h3>
             </a>
           </div>
         </div>
-        <img src="../assets/images/no background white.png" alt="Social Risk Audit logo" class="hidden md:block h-auto w-64 sm:w-80 md:w-[28rem] lg:w-[32rem] opacity-90" />
       </div>
     </section>
   </main>
