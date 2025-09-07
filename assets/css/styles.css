@@ -23,62 +23,6 @@ html[dir="rtl"] .text-right { text-align: left; }
 /* Flip common gap/padding nuances only if needed; Tailwind handles most layout well in RTL. */
 /* Optional: tweak FAQ summary arrow if you added icons, not needed now. */
 
-/* Mega menu transitions */
-#megaPanel { transition: opacity .15s ease; }
-#megaPanel[data-open="true"] { opacity: 1; }
-#megaPanel.hidden { opacity: 0; }
-
-/* Language toggle (dark theme) */
-.toggle-switch-container {
-  position: relative;
-  display: inline-block;
-  width: 250px;
-  height: 60px;
-  background-color: #333333;
-  border-radius: 30px;
-  cursor: pointer;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  border: 1px solid #444444;
-}
-.toggle-switch-container:hover { box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); }
-
-.toggle-switch-labels {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: space-around;
-  z-index: 2;
-}
-
-.toggle-switch-label {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #cccccc;
-  transition: color 0.3s ease;
-}
-
-.toggle-switch-slider {
-  position: absolute;
-  top: 0; left: 0;
-  width: 50%; height: 100%;
-  background-color: #ffffff;
-  border-radius: 30px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-body.hebrew-mode .toggle-switch-slider { transform: translateX(100%); }
-body.english-mode .toggle-switch-label.en-label { color: #101010; }
-body.hebrew-mode .toggle-switch-label.he-label { color: #101010; }
-
-/* Compact on narrow screens */
-@media (max-width: 480px) {
-  .toggle-switch-container { width: 200px; height: 48px; }
-  .toggle-switch-label { font-size: 1rem; }
-}
-
 /* Sidebar (desktop + mobile drawer) */
 .sra-sidebar { position: fixed; inset: 0 0 0 auto; width: 280px; max-width: 90vw; background:#0b0b0b; border-left:1px solid rgba(255,255,255,.08); transform: translateX(100%); transition: transform .2s ease; z-index: 60; }
 .sra-sidebar.open { transform: translateX(0); }

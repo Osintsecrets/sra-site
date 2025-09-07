@@ -1,73 +1,62 @@
-import { SRAi18n } from './i18n.js';
 import { mountLayout } from './layout.js';
 
-function applyLanguage(i18n, code){
-  const html = document.documentElement;
-  const body = document.body;
-  const lang = (code === 'he') ? 'he' : 'en';
-  localStorage.setItem('language', lang);
-  body.classList.toggle('hebrew-mode', lang==='he');
-  body.classList.toggle('english-mode', lang!=='he');
-  html.setAttribute('lang', lang);
-  html.setAttribute('dir', lang==='he' ? 'rtl' : 'ltr');
-  i18n.setLanguage(lang);
+function setLanguageLinks(pageKey) {
+  const map = {
+    home: 'index.html',
+    how: 'how.html',
+    deliverables: 'what-you-get.html',
+    packages: 'packages.html',
+    ethics: 'ethics.html',
+    about: 'about.html',
+    contact: 'contact.html',
+    faq: 'faq.html'
+  };
+  const page = map[pageKey] || 'index.html';
+  const en = document.getElementById('lang-en');
+  const he = document.getElementById('lang-he');
+  if (en) en.setAttribute('href', `../en/${page}`);
+  if (he) he.setAttribute('href', `../he/${page}`);
 }
 
-function wireLanguageToggles(i18n){
-  document.addEventListener('click', (e)=>{
-    const el = e.target.closest('#language-toggle');
-    if(!el) return;
-    const current = localStorage.getItem('language') || 'en';
-    applyLanguage(i18n, current==='he' ? 'en' : 'he');
-  });
-}
-
-async function mountSidebar(pageKey, i18n){
-  if(pageKey === 'home') return; // no sidebar on home
+async function mountSidebar(pageKey) {
+  if (pageKey === 'home') return; // no sidebar on home
   const host = document.querySelector('#sra-sidebar');
-  if(!host) return;
+  if (!host) return;
 
-  const res = await fetch('partials/sidebar.html');
+  const res = await fetch('../partials/sidebar.html');
   host.innerHTML = await res.text();
 
   // open/close (mobile)
   const aside = host.querySelector('.sra-sidebar');
   const openBtn = host.querySelector('#sra-sidebar-open');
   const closeBtn = host.querySelector('#sra-sidebar-close');
-  openBtn?.addEventListener('click', ()=> aside.classList.add('open'));
-  closeBtn?.addEventListener('click', ()=> aside.classList.remove('open'));
-  aside?.addEventListener('click', (e)=>{ if(e.target === aside) aside.classList.remove('open'); });
+  openBtn?.addEventListener('click', () => aside.classList.add('open'));
+  closeBtn?.addEventListener('click', () => aside.classList.remove('open'));
+  aside?.addEventListener('click', (e) => { if (e.target === aside) aside.classList.remove('open'); });
 
   // active item
-  const map = { home:'index.html', how:'how.html', deliverables:'what-you-get.html', packages:'packages.html', ethics:'ethics.html', about:'about.html', contact:'contact.html' };
+  const map = {
+    home: 'index.html',
+    how: 'how.html',
+    deliverables: 'what-you-get.html',
+    packages: 'packages.html',
+    ethics: 'ethics.html',
+    about: 'about.html',
+    contact: 'contact.html',
+    faq: 'faq.html'
+  };
   const path = map[pageKey];
-  host.querySelectorAll('.sra-nav-item').forEach(a=>{
-    if(a.getAttribute('href') === path) a.classList.add('active');
+  host.querySelectorAll('.sra-nav-item').forEach(a => {
+    if (a.getAttribute('href') === path) a.classList.add('active');
   });
 
-  // translate labels now that DOM is in place
-  i18n.translateDocument();
   document.body.classList.add('has-sidebar');
 }
 
-export async function sraInit(pageKey){
+export async function sraInit(pageKey) {
   await mountLayout(pageKey);
-
-  const i18n = new SRAi18n({
-    defaultLang: 'en',
-    supported: ['en','he'],
-    dictionaries: {
-      en: 'assets/i18n/en.json',
-      he: 'assets/i18n/he.json'
-    }
-  });
-  await i18n.init();
-  window.__sra_i18n = i18n;
-
-  const saved = localStorage.getItem('language') || 'en';
-  applyLanguage(i18n, saved);
-  wireLanguageToggles(i18n);
-  await mountSidebar(pageKey, i18n);
+  setLanguageLinks(pageKey);
+  await mountSidebar(pageKey);
 
   // CTAs
   const LINKS = {
