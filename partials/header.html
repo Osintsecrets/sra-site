@@ -1,11 +1,28 @@
-<header class="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-    <a href="index.html">
-      <img src="../assets/images/no background white.png" alt="Social Risk Audit logo" class="h-8 w-auto" />
-    </a>
-    <div class="flex items-center gap-3">
-      <a id="lang-en" href="../en/index.html" class="text-sm font-medium">English</a>
-      <a id="lang-he" href="../he/index.html" class="text-sm font-medium">עברית</a>
-    </div>
-  </div>
+//////////////////////////////////////////////////////////////
+// partials/header.html
+<header class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+  <a href="./index.html" class="flex items-center gap-2">
+    <img src="../assets/images/no background white.png" alt="Social Risk Audit" class="h-8 w-auto opacity-90">
+    <span class="font-semibold tracking-wide">Social Risk Audit</span>
+  </a>
+
+  <nav class="hidden md:flex items-center gap-6 text-white/90">
+    <a class="hover:text-white sra-nav-item" href="how.html">How it works</a>
+    <a class="hover:text-white sra-nav-item" href="what-you-get.html">What you get</a>
+    <a class="hover:text-white sra-nav-item" href="packages.html">Packages</a>
+    <a class="hover:text-white sra-nav-item" href="ethics.html">Ethics</a>
+    <a class="hover:text-white sra-nav-item" href="about.html">About</a>
+    <a class="hover:text-white sra-nav-item" href="faq.html">FAQ</a>
+    <a class="hover:text-white sra-nav-item" href="contact.html">Contact</a>
+    <a class="hover:text-white sra-nav-item" href="estimator.html">Estimator</a>
+    <span class="mx-2 h-6 w-px bg-white/20"></span>
+    <a id="lang-en" class="hover:text-white" href="#">English</a>
+    <span class="text-white/40">/</span>
+    <a id="lang-he" class="hover:text-white" href="#">עברית</a>
+  </nav>
+
+  <button id="sra-sidebar-open" class="md:hidden inline-flex items-center gap-2 rounded-xl border border-white/15 px-3 py-2">
+    <span class="i">☰</span><span>Menu</span>
+  </button>
 </header>
+//////////////////////////////////////////////////////////////

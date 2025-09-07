@@ -13,13 +13,49 @@
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
   <div id="sra-header"></div>
-  <div id="sra-sidebar"></div>  <!-- sidebar mounts here -->
+  <div id="sra-sidebar"></div>
+
   <main id="main">
-    <section class="mx-auto max-w-4xl px-4 py-16">
+    <section class="mx-auto max-w-5xl px-4 py-16">
       <h1 class="text-4xl md:text-5xl font-extrabold">Packages</h1>
       <p class="mt-3 text-white/70">Choose depth; add focused pivots.</p>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">Quick Check</h2>
+          <ul class="mt-3 list-disc pl-5 text-white/80 space-y-2">
+            <li>Public-view snapshot (last 6–12 months)</li>
+            <li>Top exposure highlights</li>
+            <li>Next steps checklist</li>
+          </ul>
+          <a id="ctaStartQuick" href="#" class="mt-6 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Start</a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">Standard Audit</h2>
+          <ul class="mt-3 list-disc pl-5 text-white/80 space-y-2">
+            <li>Broader timeline + comments sampling</li>
+            <li>Evidence file with screenshots</li>
+            <li>Privacy Action Guide</li>
+          </ul>
+          <a id="ctaStartStandard" href="#" class="mt-6 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Start</a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">Deep Dive</h2>
+          <ul class="mt-3 list-disc pl-5 text-white/80 space-y-2">
+            <li>Longer timeline + groups/albums review</li>
+            <li>Full risk report + scenarios</li>
+            <li>Live handoff call (optional)</li>
+          </ul>
+          <a id="ctaStartDeep" href="#" class="mt-6 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">Start</a>
+        </article>
+      </div>
+
+      <div class="mt-8 text-sm text-white/60">Need help choosing? Try the <a class="underline hover:text-white" href="estimator.html">Estimator</a>.</div>
     </section>
   </main>
+
   <div id="sra-footer"></div>
   <script type="module">
     import { sraInit } from '../assets/js/main.js';

@@ -1,21 +1,30 @@
-<aside class="sra-sidebar">
-  <div class="sra-sidebar-inner">
-    <a href="index.html" class="sra-brand">
-      <img src="../assets/images/no background white.png" alt="SRA" class="h-7 w-auto" />
-    </a>
-
-    <nav class="sra-nav">
-      <a href="index.html" class="sra-nav-item">Home</a>
-      <a href="how.html" class="sra-nav-item">How it works</a>
-      <a href="what-you-get.html" class="sra-nav-item">What you get</a>
-      <a href="packages.html" class="sra-nav-item">Packages</a>
-      <a href="ethics.html" class="sra-nav-item">Ethics</a>
-      <a href="about.html" class="sra-nav-item">About</a>
-      <a href="contact.html" class="sra-nav-item">Contact</a>
+//////////////////////////////////////////////////////////////
+// partials/sidebar.html
+<aside class="sra-sidebar fixed inset-0 z-50 md:static md:inset-auto md:z-auto">
+  <div class="absolute inset-0 bg-black/50 md:hidden"></div>
+  <div class="absolute right-0 top-0 h-full w-80 bg-neutral-900 shadow-xl md:static md:w-64">
+    <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
+      <span class="font-semibold">Navigate</span>
+      <button id="sra-sidebar-close" class="rounded-lg border border-white/15 px-2 py-1">✕</button>
+    </div>
+    <nav class="p-3 grid gap-1">
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="index.html">Home</a>
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="how.html">How it works</a>
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="what-you-get.html">What you get</a>
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="packages.html">Packages</a>
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="ethics.html">Ethics</a>
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="about.html">About</a>
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="faq.html">FAQ</a>
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="estimator.html">Estimator</a>
+      <a class="sra-nav-item block rounded-lg px-3 py-2 hover:bg-white/10" href="contact.html">Contact</a>
     </nav>
-
-    <button id="sra-sidebar-close" class="sra-close" aria-label="Close">×</button>
   </div>
 </aside>
 
-<button id="sra-sidebar-open" class="sra-open md:hidden" aria-label="Open">☰</button>
+<style>
+  .sra-sidebar { display:none; }
+  .sra-sidebar.open { display:block; }
+  @media (min-width: 768px) { .sra-sidebar { display:block; } }
+  .sra-nav-item.active { background: rgba(255,255,255,0.08); }
+</style>
+//////////////////////////////////////////////////////////////

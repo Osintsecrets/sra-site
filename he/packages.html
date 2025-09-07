@@ -13,13 +13,49 @@
 </head>
 <body class="bg-neutral-950 text-neutral-100 font-sans">
   <div id="sra-header"></div>
-  <div id="sra-sidebar"></div>  <!-- sidebar mounts here -->
+  <div id="sra-sidebar"></div>
+
   <main id="main">
-    <section class="mx-auto max-w-4xl px-4 py-16">
+    <section class="mx-auto max-w-5xl px-4 py-16">
       <h1 class="text-4xl md:text-5xl font-extrabold">חבילות</h1>
       <p class="mt-3 text-white/70">בחרו עומק; הוסיפו כיווני חקירה ממוקדים.</p>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">בדיקה מהירה</h2>
+          <ul class="mt-3 list-disc pl-5 text-white/80 space-y-2">
+            <li>צילום מצב ציבורי (6–12 חודשים אחרונים)</li>
+            <li>נקודות חשיפה עיקריות</li>
+            <li>רשימת צעדים הבאים</li>
+          </ul>
+          <a id="ctaStartQuick" href="#" class="mt-6 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">התחלה</a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">בדיקה סטנדרטית</h2>
+          <ul class="mt-3 list-disc pl-5 text-white/80 space-y-2">
+            <li>טווח זמן רחב יותר + דגימת תגובות</li>
+            <li>קובץ ראיות עם צילומי מסך</li>
+            <li>מדריך פעולה לפרטיות</li>
+          </ul>
+          <a id="ctaStartStandard" href="#" class="mt-6 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">התחלה</a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6">
+          <h2 class="text-xl font-bold">צלילה עמוקה</h2>
+          <ul class="mt-3 list-disc pl-5 text-white/80 space-y-2">
+            <li>טווח זמן ארוך יותר + סקירת קבוצות/אלבומים</li>
+            <li>דוח סיכונים מלא + תרחישים</li>
+            <li>שיחת מסירה חיה (אופציונלי)</li>
+          </ul>
+          <a id="ctaStartDeep" href="#" class="mt-6 inline-block rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-neutral-900 hover:bg-emerald-400">התחלה</a>
+        </article>
+      </div>
+
+      <div class="mt-8 text-sm text-white/60">זקוקים לעזרה בבחירה? נסו את <a class="underline hover:text-white" href="estimator.html">המעריך</a>.</div>
     </section>
   </main>
+
   <div id="sra-footer"></div>
   <script type="module">
     import { sraInit } from '../assets/js/main.js';
